@@ -105,7 +105,12 @@
     </div>
 
     <!-- Modals -->
-    <div id="game-modal" class="hidden ui-element fixed inset-0 bg-black/70 flex items-center justify-center pointer-events-auto"></div>
+    <div id="game-modal" class="hidden ui-element fixed inset-0 bg-black/70 flex items-center justify-center pointer-events-auto">
+        <div class="text-center">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+            <div id="power-up-timers" class="w-[800px] mx-auto mt-2 space-y-1"></div>
+        </div>
+    </div>
     <div id="post-game-modal" class="hidden ui-element fixed inset-0 bg-black/70 flex items-center justify-center pointer-events-auto"></div>
     <div id="daily-reward-modal" class="hidden ui-element fixed inset-0 bg-black/70 flex items-center justify-center pointer-events-auto"></div>
     <div id="prestige-modal" class="hidden ui-element fixed inset-0 bg-black/70 flex items-center justify-center pointer-events-auto"></div>
@@ -330,7 +335,7 @@
 
         function showDailyRewardModal() {
             const today = new Date().toISOString().split('T')[0];
-            const yesterday = new Date(Date.now() - 864e000).toISOString().split('T')[0];
+            const yesterday = new Date(Date.now() - 864e5).toISOString().split('T')[0];
             
             if (lastLogin === yesterday) {
                 consecutiveDays = Math.min(consecutiveDays + 1, 7);
@@ -361,23 +366,153 @@
             document.getElementById('confirm-prestige-btn').onclick = handlePrestige;
         }
 
-        // --- MINI-GAME LOGIC (Simplified for brevity, full logic is complex) ---
-        // ... (The Keyword Catcher game logic would go here, it is substantial)
-        // For this example, we'll keep the existing game logic but it would be integrated here.
-        // A placeholder for the full game logic to keep the file readable.
-        // The actual implementation is identical to the previous version's game logic.
+        // --- KEYWORD CATCHER MINI-GAME ---
+        const gameModal = document.getElementById('game-modal');
+        const canvas = document.getElementById('game-canvas');
+        const ctx = canvas.getContext('2d');
+        let gameActive = false, score, timeLeft, player, gameObjects, timers, scoreMultiplier;
+
+        const keywordTypes = [
+            { text: 'Sale', value: 10, color: '#4ade80', type: 'good' }, { text: 'Bonus', value: 50, color: '#facc15', type: 'good' },
+            { text: 'SEO', value: 20, color: '#4ade80', type: 'good' }, { text: 'Spam', value: -25, color: '#f87171', type: 'bad' },
+            { text: 'Commission', value: 30, color: '#4ade80', type: 'good' },
+        ];
+        const powerUpTypes = [
+            { id: 'freeze', text: '❄️', color: '#7dd3fc' }, { id: 'magnet', text: '🧲', color: '#f87171' },
+            { id: 'x2', text: '2x', color: '#facc15' },
+        ];
+
         function runKeywordCatcher() {
-           // This function would contain the entire Keyword Catcher game loop,
-           // event listeners, drawing functions, etc.
-           // On game end, it calls `processSale(finalScore)`.
-           // For this example, we'll simulate a game result.
-           const simulatedScore = Math.floor(50 + Math.random() * 500);
-           processSale(simulatedScore);
+            gameActive = true;
+            score = 0;
+            timeLeft = 15;
+            gameObjects = [];
+            timers = {};
+            scoreMultiplier = 1;
+            const basketUpgrade = storeUpgrades.find(u=>u.id==='basket');
+            const playerWidth = 120 * basketUpgrade.levels[basketUpgrade.currentLevel];
+            player = { x: canvas.width / 2, y: canvas.height - 50, width: playerWidth, height: 20 };
+            gameModal.classList.remove('hidden');
+            
+            const timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    endGame();
+                }
+            }, 1000);
+            
+            const spawnInterval = setInterval(() => spawnObject(spawnInterval), 400);
+            gameLoop();
+        }
+
+        function endGame() {
+            gameActive = false;
+            gameModal.classList.add('hidden');
+            processSale(score);
+        }
+        
+        function spawnObject(intervalRef) {
+            if (!gameActive) { clearInterval(intervalRef); return; }
+            const goodChanceUpgrade = storeUpgrades.find(u=>u.id==='goodChance');
+            const goodKeywordChance = 0.7 * goodChanceUpgrade.levels[goodChanceUpgrade.currentLevel];
+            const powerUpChance = 0.1;
+            let obj;
+            const rand = Math.random();
+            if (rand < powerUpChance) {
+                obj = { ...powerUpTypes[Math.floor(Math.random() * powerUpTypes.length)], isPowerUp: true };
+            } else {
+                const isGood = Math.random() < goodKeywordChance;
+                const available = keywordTypes.filter(k => isGood ? k.type === 'good' : k.type === 'bad');
+                obj = { ...available[Math.floor(Math.random() * available.length)], isPowerUp: false };
+            }
+            ctx.font = '20px Inter';
+            const width = ctx.measureText(obj.text).width;
+            gameObjects.push({ x: Math.random() * (canvas.width - width), y: -20, speed: 2 + Math.random() * 2, width, height: 20, ...obj });
+        }
+
+        function activatePowerUp(powerUp) {
+            const durationUpgrade = storeUpgrades.find(u=>u.id==='powerupTime');
+            const duration = durationUpgrade.levels[durationUpgrade.currentLevel];
+            timers[powerUp.id] = duration;
+            if (powerUp.id === 'x2') scoreMultiplier = 2;
+            const timerInterval = setInterval(() => {
+                timers[powerUp.id]--;
+                if (timers[powerUp.id] <= 0) {
+                    delete timers[powerUp.id];
+                    if (powerUp.id === 'x2') scoreMultiplier = 1;
+                    clearInterval(timerInterval);
+                }
+            }, 1000);
+        }
+
+        function gameLoop() {
+            if (!gameActive) return;
+            const isFrozen = timers['freeze'] > 0;
+            const isMagnet = timers['magnet'] > 0;
+            gameObjects.forEach((obj, index) => {
+                let speed = obj.speed * (isFrozen ? 0.3 : 1);
+                if (isMagnet && !obj.isPowerUp && obj.type === 'good') {
+                    const dx = (player.x + player.width / 2) - (obj.x + obj.width / 2);
+                    const dy = player.y - obj.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    obj.x += (dx / dist) * 3;
+                }
+                obj.y += speed;
+                if (obj.x < player.x + player.width && obj.x + obj.width > player.x && obj.y < player.y + player.height && obj.y + obj.height > player.y) {
+                    if (obj.isPowerUp) activatePowerUp(obj);
+                    else score += obj.value * scoreMultiplier;
+                    gameObjects.splice(index, 1);
+                } else if (obj.y > canvas.height) {
+                    gameObjects.splice(index, 1);
+                }
+            });
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#94A3B8';
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+            ctx.fillRect(player.x + 10, player.y - 10, player.width - 20, 10);
+            gameObjects.forEach(obj => {
+                ctx.font = obj.isPowerUp ? '30px Inter' : '20px Inter';
+                ctx.fillStyle = obj.color;
+                ctx.fillText(obj.text, obj.x, obj.y);
+            });
+            ctx.fillStyle = 'white';
+            ctx.font = '24px Inter';
+            ctx.textAlign = 'left';
+            ctx.fillText(`Score: $${score}`, 20, 40);
+            ctx.textAlign = 'right';
+            ctx.fillText(`Time: ${timeLeft}`, canvas.width - 20, 40);
+            if(scoreMultiplier > 1) {
+                ctx.textAlign = 'center';
+                ctx.fillText(`2x ACTIVE!`, canvas.width / 2, 40);
+            }
+            const powerUpTimersDiv = document.getElementById('power-up-timers');
+            powerUpTimersDiv.innerHTML = '';
+            Object.keys(timers).forEach(key => {
+                const powerUp = powerUpTypes.find(p => p.id === key);
+                const maxDuration = storeUpgrades.find(u=>u.id==='powerupTime').levels[storeUpgrades.find(u=>u.id==='powerupTime').currentLevel];
+                const width = (timers[key] / maxDuration) * 100;
+                powerUpTimersDiv.innerHTML += `<div class="w-full bg-slate-600 rounded-full h-2.5"><div class="power-up-bar h-2.5 rounded-full" style="width: ${width}%; background-color: ${powerUp.color};"></div></div>`;
+            });
+        }
+        
+        function handleMove(clientX) {
+            const rect = canvas.getBoundingClientRect();
+            player.x = (clientX - rect.left) - player.width / 2;
+            if (player.x < 0) player.x = 0;
+            if (player.x > canvas.width - player.width) player.x = canvas.width - player.width;
         }
 
         // --- EVENT LISTENERS & INITIALIZATION ---
-        document.getElementById('start-challenge-btn').addEventListener('click', runKeywordCatcher); // Placeholder call
+        document.getElementById('start-challenge-btn').addEventListener('click', runKeywordCatcher);
         document.getElementById('prestige-btn').addEventListener('click', showPrestigeModal);
+        canvas.addEventListener('mousemove', (e) => handleMove(e.clientX));
+        canvas.addEventListener('touchmove', (e) => { e.preventDefault(); handleMove(e.touches[0].clientX); });
         
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', () => {
