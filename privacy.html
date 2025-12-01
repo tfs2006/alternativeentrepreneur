@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Alternative Entrepreneur</title>
+  <meta name="description" content="Privacy Policy for Alternative Entrepreneur - Learn how we collect, use, and protect your personal information.">
+  <link rel="canonical" href="https://tfs2006.github.io/alternativeentrepreneur/privacy.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #030712;
+      --bg-secondary: #0a0f1a;
+      --surface: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(255,255,255,0.15);
+      --primary: #00d4ff;
+      --primary-glow: rgba(0,212,255,0.4);
+      --gradient-1: linear-gradient(135deg, #00d4ff 0%, #a855f7 50%, #ec4899 100%);
+      --gradient-2: linear-gradient(135deg, #00d4ff 0%, #6366f1 100%);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(ellipse 600px 400px at 20% 30%, rgba(0,212,255,0.1), transparent 50%),
+        radial-gradient(ellipse 500px 350px at 80% 20%, rgba(168,85,247,0.08), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(3,7,18,0.8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-1);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    .brand-text {
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--gradient-2);
+      color: var(--bg-primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px var(--primary-glow);
+    }
+
+    .content {
+      padding: 140px 0 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .legal-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+    }
+
+    .legal-content h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: var(--text-primary);
+    }
+
+    .legal-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .legal-content p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    .legal-content a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .legal-content a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-1);
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 640px) {
+      .legal-content {
+        padding: 32px 24px;
+      }
+
+      .nav-cta {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+      }
+
+      .brand-text {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <span class="brand-text">Alternative Entrepreneur</span>
+      </a>
+      <a class="nav-cta" href="https://pplx.ai/chloeandis29106" target="_blank" rel="noopener nofollow">
+        Get Started
+      </a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-subtitle">Last updated: December 1, 2025</p>
+      </div>
+
+      <div class="legal-content">
+        <h2>Introduction</h2>
+        <p>Alternative Entrepreneur ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+
+        <h2>Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+          <li><strong>Personal Information:</strong> Name, email address, and other contact details you voluntarily provide when contacting us or signing up for our services.</li>
+          <li><strong>Usage Data:</strong> Information about how you interact with our website, including pages visited, time spent, and navigation patterns.</li>
+          <li><strong>Device Information:</strong> Browser type, operating system, device type, and IP address for analytics and security purposes.</li>
+          <li><strong>Cookies:</strong> Small data files stored on your device to enhance your browsing experience.</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+          <li>To provide and maintain our services</li>
+          <li>To communicate with you about updates, promotions, or support inquiries</li>
+          <li>To analyze and improve our website performance and user experience</li>
+          <li>To protect against fraudulent or unauthorized activity</li>
+          <li>To comply with legal obligations</li>
+        </ul>
+
+        <h2>Data Sharing and Disclosure</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share your data only in the following circumstances:</p>
+        <ul>
+          <li>With service providers who assist us in operating our website and services</li>
+          <li>When required by law or to respond to legal processes</li>
+          <li>To protect our rights, privacy, safety, or property</li>
+          <li>In connection with a merger, acquisition, or sale of assets</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+
+        <h2>Your Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+        <ul>
+          <li>Access and receive a copy of your data</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your data</li>
+          <li>Object to or restrict processing of your data</li>
+          <li>Data portability</li>
+          <li>Withdraw consent at any time</li>
+        </ul>
+
+        <h2>Cookies</h2>
+        <p>Our website uses cookies to enhance your experience. You can control cookie preferences through your browser settings. Disabling cookies may affect certain features of our website.</p>
+
+        <h2>Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review their privacy policies.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+        <p><a href="mailto:aesite@4ourmedia.com">aesite@4ourmedia.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-brand-icon">⚡</div>
+        <span class="footer-text">© <span id="year"></span> Alternative Entrepreneur. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:aesite@4ourmedia.com">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
