@@ -27,6 +27,14 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Tools & Free Resources -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/tools/ai-prompt-templates/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Pillar Hubs -->
   <url>
     <loc>https://alternativeentrepreneur.com/affiliate-marketing/</loc>
