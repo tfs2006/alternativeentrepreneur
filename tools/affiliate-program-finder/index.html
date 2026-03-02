@@ -159,6 +159,12 @@
     .updated-note {
       font-size:.75rem; color:var(--text-dim); margin-bottom:1rem;
     }
+    @media (max-width: 600px) {
+      .filter-group { min-width: min(200px, 100%); flex: 1; }
+      .search-wrap { flex-wrap: wrap; }
+      .search-wrap input { max-width: 100%; }
+      .finder-hero { padding: 2.5rem 0 1.5rem; }
+    }
   </style>
 </head>
 <body>

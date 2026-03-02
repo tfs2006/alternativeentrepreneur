@@ -118,13 +118,18 @@ a:hover { text-decoration: underline; }
 }
 .site-nav .nav-cta:hover { background: var(--accent-dark); color: #0d0f14; text-decoration: none; }
 
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: .5rem; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: all .3s; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: .6rem; -webkit-tap-highlight-color: transparent; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: transform .3s, opacity .25s; }
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 768px) {
-  .site-nav { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 1rem; gap: .25rem; }
+  .site-nav { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: .75rem 1rem 1rem; gap: .15rem; z-index: 99; }
   .site-nav.open { display: flex; }
-  .hamburger { display: block; }
+  .site-nav a { padding: .75rem 1rem; width: 100%; border-radius: var(--radius); font-size: .95rem; }
+  .site-nav .nav-cta { margin-left: 0; margin-top: .35rem; text-align: center; justify-content: center; display: flex; }
+  .hamburger { display: flex; align-items: center; justify-content: center; }
 }
 
 /* ---------- Hero ---------- */
@@ -218,7 +223,7 @@ section { padding: 4rem 0; }
 /* ---------- Pillar Cards (Homepage) ---------- */
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
   gap: 1.25rem;
 }
 .pillar-card {
@@ -263,7 +268,7 @@ section { padding: 4rem 0; }
 /* ---------- Post Cards ---------- */
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1.25rem;
 }
 .post-card {
@@ -469,7 +474,7 @@ li.check-item .icon-check { margin-top: .22rem; }
 /* ---------- Related Posts ---------- */
 .related { padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 2.5rem; }
 .related h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1.5rem; font-size: .78rem; }
-.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1rem; }
 .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; transition: border-color .2s; }
 .related-card:hover { border-color: var(--accent); }
 .related-card .cat { font-size: .72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
@@ -513,8 +518,25 @@ li.check-item .icon-check { margin-top: .22rem; }
   .stats-bar { gap: 1.5rem; }
   .tool-card { flex-direction: column; }
   .tool-card-cta { align-items: flex-start; flex-direction: row; }
+  section { padding: 2.75rem 0; }
+  .pillar-hero { padding: 2.5rem 0 1.5rem; }
+  .article-header { padding: 2rem 0 1.5rem; }
+  .callout { padding: 1rem; }
+  .newsletter-box { padding: 1.75rem 1.25rem; }
+  .kw-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .btn { padding: .65rem 1.1rem; }
+  .toc { padding: 1.15rem; }
 }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
   .hero { padding: 3rem 0 2.5rem; }
+  section { padding: 2rem 0; }
+  .pillar-hero { padding: 2rem 0 1.25rem; }
+  .stat .val { font-size: 1.65rem; }
+  .article-body h2 { font-size: 1.35rem; }
+  .article-body h3 { font-size: 1.1rem; }
+  .tool-card-cta { flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: .5rem; }
+  .footer-legal { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .footer-legal a { margin-left: 0; margin-right: .75rem; }
 }
