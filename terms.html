@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Alternative Entrepreneur</title>
+  <meta name="description" content="Terms of Service for Alternative Entrepreneur - Read our terms and conditions for using our website and services.">
+  <link rel="canonical" href="https://tfs2006.github.io/alternativeentrepreneur/terms.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #030712;
+      --bg-secondary: #0a0f1a;
+      --surface: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(255,255,255,0.15);
+      --primary: #00d4ff;
+      --primary-glow: rgba(0,212,255,0.4);
+      --gradient-1: linear-gradient(135deg, #00d4ff 0%, #a855f7 50%, #ec4899 100%);
+      --gradient-2: linear-gradient(135deg, #00d4ff 0%, #6366f1 100%);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(ellipse 600px 400px at 20% 30%, rgba(0,212,255,0.1), transparent 50%),
+        radial-gradient(ellipse 500px 350px at 80% 20%, rgba(168,85,247,0.08), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(3,7,18,0.8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-1);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    .brand-text {
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--gradient-2);
+      color: var(--bg-primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px var(--primary-glow);
+    }
+
+    .content {
+      padding: 140px 0 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .legal-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+    }
+
+    .legal-content h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: var(--text-primary);
+    }
+
+    .legal-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .legal-content p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    .legal-content a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .legal-content a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-1);
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 640px) {
+      .legal-content {
+        padding: 32px 24px;
+      }
+
+      .nav-cta {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+      }
+
+      .brand-text {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <span class="brand-text">Alternative Entrepreneur</span>
+      </a>
+      <a class="nav-cta" href="https://pplx.ai/chloeandis29106" target="_blank" rel="noopener nofollow">
+        Get Started
+      </a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Terms of Service</h1>
+        <p class="page-subtitle">Last updated: December 1, 2025</p>
+      </div>
+
+      <div class="legal-content">
+        <h2>Agreement to Terms</h2>
+        <p>By accessing or using the Alternative Entrepreneur website ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Service.</p>
+
+        <h2>Description of Service</h2>
+        <p>Alternative Entrepreneur provides information, resources, and recommendations related to AI productivity tools and services. We may provide links to third-party products and services that we believe may be useful to our users.</p>
+
+        <h2>Use of the Service</h2>
+        <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+        <ul>
+          <li>Use the Service in any way that violates any applicable laws or regulations</li>
+          <li>Attempt to interfere with or disrupt the Service or servers</li>
+          <li>Attempt to gain unauthorized access to any portion of the Service</li>
+          <li>Use any automated means to access the Service without our permission</li>
+          <li>Transmit any malicious code, viruses, or harmful content</li>
+          <li>Impersonate any person or entity or misrepresent your affiliation</li>
+          <li>Collect or harvest any information from the Service without permission</li>
+        </ul>
+
+        <h2>Intellectual Property</h2>
+        <p>The Service and its original content, features, and functionality are owned by Alternative Entrepreneur and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+        <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, or exploit any content from the Service without our prior written consent.</p>
+
+        <h2>Third-Party Links and Services</h2>
+        <p>Our Service may contain links to third-party websites or services that are not owned or controlled by Alternative Entrepreneur. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services.</p>
+        <p>We may earn commissions or referral fees when you click on links or make purchases through third-party services we recommend. This does not affect our recommendations or the price you pay.</p>
+
+        <h2>Disclaimer of Warranties</h2>
+        <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied, including but not limited to:</p>
+        <ul>
+          <li>Implied warranties of merchantability and fitness for a particular purpose</li>
+          <li>Warranties that the Service will be uninterrupted, secure, or error-free</li>
+          <li>Warranties regarding the accuracy or reliability of any information obtained through the Service</li>
+        </ul>
+
+        <h2>Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Alternative Entrepreneur shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or goodwill, arising out of or in connection with:</p>
+        <ul>
+          <li>Your use or inability to use the Service</li>
+          <li>Any content obtained from the Service</li>
+          <li>Unauthorized access to or alteration of your data</li>
+          <li>Any third-party products or services recommended through the Service</li>
+        </ul>
+
+        <h2>Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Alternative Entrepreneur and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising out of your use of the Service or violation of these Terms.</p>
+
+        <h2>Modifications to Terms</h2>
+        <p>We reserve the right to modify or replace these Terms at any time at our sole discretion. We will provide notice of material changes by posting the updated Terms on this page and updating the "Last updated" date.</p>
+        <p>Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
+
+        <h2>Termination</h2>
+        <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason, including breach of these Terms.</p>
+
+        <h2>Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
+
+        <h2>Severability</h2>
+        <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+        <h2>Entire Agreement</h2>
+        <p>These Terms constitute the entire agreement between you and Alternative Entrepreneur regarding the use of the Service and supersede any prior agreements.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+        <p><a href="mailto:aesite@4ourmedia.com">aesite@4ourmedia.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-brand-icon">⚡</div>
+        <span class="footer-text">© <span id="year"></span> Alternative Entrepreneur. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:aesite@4ourmedia.com">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
