@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d0f14"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#232840" stroke-width="0.8"/>
+    </pattern>
+    <radialGradient id="heroGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#00e07a" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#00e07a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="80%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e07a" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00e07a" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#7c5cfc" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#heroGlow)"/>
+  <rect width="1200" height="630" fill="url(#purpleGlow)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accentLine)"/>
+
+  <!-- Logo mark — "A" with dot -->
+  <g transform="translate(80, 80)">
+    <rect width="56" height="56" rx="12" fill="#141720" stroke="#232840" stroke-width="1"/>
+    <path d="M14 42 L28 14 L42 42" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="20.5" y1="34" x2="35.5" y2="34" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="41" cy="41" r="5.5" fill="#00e07a"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="152" y="102" fill="#ffffff" font-size="28" font-weight="700" letter-spacing="-0.5">Alternative<tspan fill="#00e07a">Entrepreneur</tspan></text>
+  <text x="152" y="126" fill="#8b90a7" font-size="16">alternativeentrepreneur.com</text>
+
+  <!-- Main headline -->
+  <text x="80" y="260" fill="#ffffff" font-size="62" font-weight="900" letter-spacing="-2">The Alternative Way</text>
+  <text x="80" y="338" fill="#00e07a" font-size="62" font-weight="900" letter-spacing="-2">to Build Income Online</text>
+
+  <!-- Tagline -->
+  <text x="80" y="400" fill="#8b90a7" font-size="24" letter-spacing="-0.3">Real workflows · Honest AI tool reviews · Affiliate marketing that works</text>
+
+  <!-- Pill badges -->
+  <g transform="translate(80, 440)">
+    <!-- Affiliate Marketing badge -->
+    <rect width="200" height="36" rx="18" fill="rgba(0,224,122,0.10)" stroke="rgba(0,224,122,0.30)" stroke-width="1"/>
+    <text x="100" y="23.5" fill="#00e07a" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">AFFILIATE MARKETING</text>
+  </g>
+  <g transform="translate(296, 440)">
+    <!-- AI Tools badge -->
+    <rect width="140" height="36" rx="18" fill="rgba(124,92,252,0.10)" stroke="rgba(124,92,252,0.30)" stroke-width="1"/>
+    <text x="70" y="23.5" fill="#7c5cfc" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">AI TOOLS</text>
+  </g>
+  <g transform="translate(452, 440)">
+    <!-- Build With AI badge -->
+    <rect width="160" height="36" rx="18" fill="rgba(56,130,255,0.10)" stroke="rgba(56,130,255,0.30)" stroke-width="1"/>
+    <text x="80" y="23.5" fill="#5ba0ff" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">BUILD WITH AI</text>
+  </g>
+  <g transform="translate(628, 440)">
+    <!-- Workflows badge -->
+    <rect width="134" height="36" rx="18" fill="rgba(255,140,50,0.10)" stroke="rgba(255,140,50,0.30)" stroke-width="1"/>
+    <text x="67" y="23.5" fill="#ff9d4a" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">WORKFLOWS</text>
+  </g>
+
+  <!-- Right-side visual: stat cards -->
+  <g transform="translate(820, 200)">
+    <!-- Card 1 -->
+    <rect width="300" height="90" rx="14" fill="#141720" stroke="#232840" stroke-width="1"/>
+    <text x="24" y="38" fill="#00e07a" font-size="34" font-weight="900">$50–$200</text>
+    <text x="24" y="64" fill="#8b90a7" font-size="14">CPA on recommended tools</text>
+    <!-- Card 2 -->
+    <rect y="108" width="300" height="90" rx="14" fill="#141720" stroke="#232840" stroke-width="1"/>
+    <text x="24" y="146" fill="#7c5cfc" font-size="34" font-weight="900">79k+</text>
+    <text x="24" y="172" fill="#8b90a7" font-size="14">Monthly search volume targeted</text>
+    <!-- Card 3 -->
+    <rect y="216" width="300" height="90" rx="14" fill="#141720" stroke="#232840" stroke-width="1"/>
+    <text x="24" y="254" fill="#5ba0ff" font-size="34" font-weight="900">34+</text>
+    <text x="24" y="280" fill="#8b90a7" font-size="14">Keyword opportunities researched</text>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="627" width="1200" height="3" fill="url(#accentLine)"/>
+</svg>
