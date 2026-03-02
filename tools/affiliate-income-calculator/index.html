@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCWTH1T0M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MCCWTH1T0M');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affiliate Income Calculator — Estimate Your Monthly Earnings | Alternative Entrepreneur</title>
+  <meta name="description" content="Free affiliate income calculator. Enter your traffic, click-through rate, conversion rate, and average commission to project your monthly and annual affiliate earnings.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://alternativeentrepreneur.com/tools/affiliate-income-calculator/">
+  <meta property="og:title" content="Affiliate Income Calculator — Estimate Your Monthly Earnings">
+  <meta property="og:description" content="Plug in your traffic and commission numbers to see projected monthly and annual affiliate earnings. Free, no sign-up.">
+  <meta property="og:url" content="https://alternativeentrepreneur.com/tools/affiliate-income-calculator/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Affiliate Income Calculator",
+    "url": "https://alternativeentrepreneur.com/tools/affiliate-income-calculator/",
+    "description": "Free calculator to estimate monthly and annual affiliate marketing income based on traffic, CTR, conversion rate, and average commission.",
+    "isPartOf": {"@type":"WebSite","url":"https://alternativeentrepreneur.com/"}
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.svg">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    .calc-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+    .calc-hero h1 { font-size: clamp(1.9rem,4vw,2.8rem); font-weight:900; letter-spacing:-.03em; color:var(--white); margin-bottom:.75rem; }
+    .calc-hero p { color:var(--text-muted); font-size:1.05rem; max-width:640px; }
+
+    .calc-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+      padding: 2.5rem 0 5rem;
+    }
+    @media(max-width:820px){ .calc-layout{ grid-template-columns:1fr; } }
+
+    /* ── Inputs panel ── */
+    .calc-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+    }
+    .calc-panel h2 {
+      font-size:1rem; font-weight:800; color:var(--white);
+      text-transform:uppercase; letter-spacing:.06em;
+      margin-bottom:1.5rem; padding-bottom:.75rem;
+      border-bottom:1px solid var(--border);
+    }
+    .form-group { margin-bottom:1.25rem; }
+    .form-group label {
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:.82rem; font-weight:600; color:var(--text-muted);
+      margin-bottom:.45rem; letter-spacing:.02em;
+    }
+    .form-group label .hint {
+      font-size:.72rem; font-weight:400; color:var(--text-dim); font-style:italic;
+    }
+    .input-wrap { display:flex; align-items:center; gap:0; }
+    .input-prefix, .input-suffix {
+      background:var(--bg-card2); border:1px solid var(--border);
+      padding:.55rem .75rem; font-size:.85rem; color:var(--text-muted);
+      font-weight:600; flex-shrink:0;
+    }
+    .input-prefix { border-right:none; border-radius:var(--radius) 0 0 var(--radius); }
+    .input-suffix { border-left:none; border-radius:0 var(--radius) var(--radius) 0; }
+    .form-input {
+      flex:1; background:var(--bg); border:1px solid var(--border);
+      padding:.55rem .85rem; font-size:.92rem; color:var(--text);
+      font-family:var(--font-sans); outline:none; transition:border-color .18s;
+      min-width:0;
+    }
+    .form-input:focus { border-color:var(--accent); }
+    .form-input::-webkit-inner-spin-button,
+    .form-input::-webkit-outer-spin-button { opacity:1; }
+
+    .input-wrap--solo .form-input { border-radius:var(--radius); }
+
+    .range-wrap { display:flex; flex-direction:column; gap:.4rem; }
+    .range-row { display:flex; align-items:center; gap:.75rem; }
+    input[type=range] {
+      flex:1; accent-color:var(--accent); height:4px; cursor:pointer;
+    }
+    .range-val {
+      min-width:48px; text-align:right;
+      font-size:.85rem; font-weight:700; color:var(--accent);
+      font-family:var(--font-mono);
+    }
+
+    .divider-label {
+      font-size:.72rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.09em; color:var(--text-dim);
+      border-bottom:1px solid var(--border);
+      padding-bottom:.5rem; margin:1.5rem 0 1.1rem;
+    }
+
+    /* ── Results panel ── */
+    .results-panel {
+      display:flex; flex-direction:column; gap:1.1rem;
+    }
+
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      transition: border-color .2s;
+    }
+    .result-card.primary {
+      background: linear-gradient(135deg, rgba(0,224,122,0.07), rgba(0,224,122,0.03));
+      border-color: rgba(0,224,122,0.3);
+    }
+    .result-card-label {
+      font-size:.75rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.09em; color:var(--text-muted); margin-bottom:.4rem;
+    }
+    .result-card.primary .result-card-label { color:var(--accent); }
+    .result-val {
+      font-size:2.2rem; font-weight:900; color:var(--white);
+      letter-spacing:-.03em; line-height:1;
+    }
+    .result-card.primary .result-val { color:var(--accent); }
+    .result-sub {
+      font-size:.8rem; color:var(--text-dim); margin-top:.4rem;
+    }
+
+    /* ── Breakdown table ── */
+    .breakdown {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+    }
+    .breakdown h3 {
+      font-size:.82rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.08em; color:var(--text-muted); margin-bottom:1.1rem;
+    }
+    .breakdown-row {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:.55rem 0; border-bottom:1px solid var(--border);
+      font-size:.88rem;
+    }
+    .breakdown-row:last-child { border-bottom:none; }
+    .breakdown-row .step-label { color:var(--text-muted); }
+    .breakdown-row .step-val { font-weight:700; color:var(--white); font-family:var(--font-mono); font-size:.85rem; }
+    .breakdown-row .arrow { color:var(--text-dim); font-size:.75rem; margin:0 .5rem; }
+
+    /* ── Scenario table ── */
+    .scenarios {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      grid-column: 1/-1;
+    }
+    .scenarios h3 {
+      font-size:.82rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.08em; color:var(--text-muted); margin-bottom:1.1rem;
+    }
+    .scenario-table { width:100%; border-collapse:collapse; font-size:.85rem; }
+    .scenario-table th {
+      text-align:left; padding:.55rem .75rem; font-size:.72rem;
+      font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+      color:var(--text-dim); background:var(--bg-card2);
+    }
+    .scenario-table th:not(:first-child) { text-align:right; }
+    .scenario-table td {
+      padding:.6rem .75rem; border-bottom:1px solid var(--border);
+      color:var(--text);
+    }
+    .scenario-table td:not(:first-child) { text-align:right; font-family:var(--font-mono); }
+    .scenario-table td:last-child { font-weight:700; color:var(--accent); }
+    .scenario-table tr.current-row td { background:rgba(0,224,122,0.04); }
+    .scenario-table tr.current-row td:first-child::after {
+      content:' ← you'; color:var(--accent); font-size:.72rem; font-weight:700;
+    }
+    .scenario-table tr:last-child td { border-bottom:none; }
+
+    /* ── Disclaimer ── */
+    .calc-disclaimer {
+      font-size:.78rem; color:var(--text-dim); line-height:1.6;
+      padding:1.1rem 1.25rem;
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); grid-column:1/-1;
+    }
+    .calc-disclaimer strong { color:var(--text-muted); }
+
+    /* ── Related strip ── */
+    .related-strip {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:1rem; margin:2rem 0 3rem;
+    }
+    .strip-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:1.25rem 1.4rem;
+      transition:border-color .2s;
+    }
+    .strip-card:hover { border-color:var(--accent); }
+    .strip-card .cat { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin-bottom:.4rem; }
+    .strip-card h4 { font-size:.94rem; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:.35rem; }
+    .strip-card h4 a { color:inherit; text-decoration:none; }
+    .strip-card h4 a:hover { color:var(--accent); }
+    .strip-card p { font-size:.82rem; color:var(--text-muted); margin:0; line-height:1.5; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/affiliate-marketing/">Affiliate Marketing</a>
+        <a href="/ai-tools/">AI Tools</a>
+        <a href="/build-with-ai/">Build With AI</a>
+        <a href="/workflows/">Workflows</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://davidjwoodbury.com/" class="nav-cta">About Me</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="calc-hero">
+  <div class="container">
+    <div style="margin-bottom:.75rem;">
+      <span class="badge">Free Tool</span>
+      <span class="badge badge--purple" style="margin-left:.4rem;">No Sign-up</span>
+    </div>
+    <h1>Affiliate Income Calculator</h1>
+    <p>Enter your traffic and commission numbers to project your monthly and annual affiliate earnings. Adjust any input and results update instantly.</p>
+  </div>
+</section>
+
+<div class="container" style="max-width:1020px;">
+  <div class="calc-layout">
+
+    <!-- ── Inputs ── -->
+    <div class="calc-panel">
+      <h2>Your Numbers</h2>
+
+      <p class="divider-label">Traffic</p>
+
+      <div class="form-group">
+        <label>
+          Monthly visitors to your site
+          <span class="hint">unique visitors/mo</span>
+        </label>
+        <div class="range-wrap">
+          <div class="range-row">
+            <input type="range" id="r-visitors" min="100" max="200000" step="100" value="5000">
+            <span class="range-val" id="v-visitors">5,000</span>
+          </div>
+          <div class="input-wrap">
+            <span class="input-prefix" style="border-radius:var(--radius) 0 0 var(--radius);">visitors</span>
+            <input type="number" class="form-input" id="n-visitors" min="0" value="5000">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Click-through rate to affiliate links
+          <span class="hint">% of visitors who click</span>
+        </label>
+        <div class="range-wrap">
+          <div class="range-row">
+            <input type="range" id="r-ctr" min="0.1" max="30" step="0.1" value="4">
+            <span class="range-val" id="v-ctr">4.0%</span>
+          </div>
+          <div class="input-wrap">
+            <input type="number" class="form-input" id="n-ctr" min="0.01" max="100" step="0.1" value="4">
+            <span class="input-suffix">%</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="divider-label">Conversions</p>
+
+      <div class="form-group">
+        <label>
+          Affiliate conversion rate
+          <span class="hint">% of clicks that buy</span>
+        </label>
+        <div class="range-wrap">
+          <div class="range-row">
+            <input type="range" id="r-cvr" min="0.1" max="20" step="0.1" value="2">
+            <span class="range-val" id="v-cvr">2.0%</span>
+          </div>
+          <div class="input-wrap">
+            <input type="number" class="form-input" id="n-cvr" min="0.01" max="100" step="0.1" value="2">
+            <span class="input-suffix">%</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="divider-label">Commission</p>
+
+      <div class="form-group">
+        <label>
+          Average commission per sale
+          <span class="hint">in USD</span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">$</span>
+          <input type="number" class="form-input" id="n-commission" min="0" step="0.01" value="35" placeholder="e.g. 35">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Average order value (optional)
+          <span class="hint">if % commission below</span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">$</span>
+          <input type="number" class="form-input" id="n-aov" min="0" step="0.01" value="" placeholder="leave blank for flat commission">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Commission rate (if % based)
+          <span class="hint">only used if order value is set</span>
+        </label>
+        <div class="input-wrap">
+          <input type="number" class="form-input" id="n-commrate" min="0" max="100" step="0.1" value="" placeholder="e.g. 30" style="border-radius:var(--radius) 0 0 var(--radius);">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Results ── -->
+    <div class="results-panel">
+
+      <div class="result-card primary">
+        <div class="result-card-label">Projected Monthly Earnings</div>
+        <div class="result-val" id="res-monthly">$140</div>
+        <div class="result-sub" id="res-monthly-sub">based on your current inputs</div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-card-label">Projected Annual Earnings</div>
+        <div class="result-val" id="res-annual">$1,680</div>
+        <div class="result-sub">× 12 months</div>
+      </div>
+
+      <div class="breakdown">
+        <h3>Funnel Breakdown</h3>
+        <div class="breakdown-row">
+          <span class="step-label">Monthly visitors</span>
+          <span class="step-val" id="bd-visitors">5,000</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="step-label">Clicks to affiliate links <span class="arrow">→</span> <span id="bd-ctr-pct">4%</span> CTR</span>
+          <span class="step-val" id="bd-clicks">200</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="step-label">Conversions <span class="arrow">→</span> <span id="bd-cvr-pct">2%</span> CVR</span>
+          <span class="step-val" id="bd-conversions">4</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="step-label">Commission per sale</span>
+          <span class="step-val" id="bd-commission">$35.00</span>
+        </div>
+        <div class="breakdown-row" style="border-top:1px solid var(--border); margin-top:.25rem; padding-top:.55rem;">
+          <span class="step-label" style="font-weight:700;color:var(--white);">Monthly earnings</span>
+          <span class="step-val" style="color:var(--accent);" id="bd-monthly">$140.00</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Scenario table (full width) ── -->
+    <div class="scenarios">
+      <h3>What-If Scenarios</h3>
+      <div style="overflow-x:auto;">
+        <table class="scenario-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Monthly Visitors</th>
+              <th>Clicks</th>
+              <th>Sales</th>
+              <th>Monthly</th>
+              <th>Annual</th>
+            </tr>
+          </thead>
+          <tbody id="scenario-tbody">
+            <!-- populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── Disclaimer ── -->
+    <p class="calc-disclaimer">
+      <strong>Disclaimer:</strong> These projections are estimates for planning purposes only. Actual earnings depend on niche, traffic quality, seasonal trends, program terms, and many other factors. Industry averages: affiliate CTR ranges from 1–10%, conversion rates from 0.5–5%. New sites typically see lower conversion rates until trust is established.
+    </p>
+
+  </div>
+
+  <!-- ── Related ── -->
+  <h2 style="font-size:1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:1rem;">Related Resources</h2>
+  <div class="related-strip" style="margin-bottom:5rem;">
+    <div class="strip-card">
+      <div class="cat">Guide</div>
+      <h4><a href="/affiliate-marketing/affiliate-marketing-for-beginners/">Affiliate Marketing for Beginners</a></h4>
+      <p>How to actually hit the numbers in this calculator — from niche to first commission.</p>
+    </div>
+    <div class="strip-card">
+      <div class="cat">Programs</div>
+      <h4><a href="/affiliate-marketing/best-affiliate-programs-2026/">Best Affiliate Programs 2026</a></h4>
+      <p>High-commission programs that move the needle on your per-sale average.</p>
+    </div>
+    <div class="strip-card">
+      <div class="cat">Tool</div>
+      <h4><a href="/tools/affiliate-program-finder/">Affiliate Program Finder</a></h4>
+      <p>Filter programs by niche, commission type, and payout threshold.</p>
+    </div>
+    <div class="strip-card">
+      <div class="cat">Workflow</div>
+      <h4><a href="/workflows/affiliate-marketing-workflow/">My Affiliate Marketing Workflow</a></h4>
+      <p>The system I use to consistently publish content that drives conversions.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="affiliate-disclaimer">
+      <strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. If you click through and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools and services I personally use or have thoroughly tested.
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a>
+        <p>Real workflows, honest AI tool reviews, and affiliate marketing strategies for building income online the alternative way.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Affiliate Marketing</h5>
+        <ul>
+          <li><a href="/affiliate-marketing/">Overview</a></li>
+          <li><a href="/affiliate-marketing/affiliate-marketing-for-beginners/">Beginners Guide</a></li>
+          <li><a href="/affiliate-marketing/how-to-find-affiliate-products-to-promote/">Find Products</a></li>
+          <li><a href="/affiliate-marketing/best-affiliate-programs-2026/">Best Programs 2026</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <ul>
+          <li><a href="/tools/ai-prompt-templates/">AI Prompt Templates</a></li>
+          <li><a href="/tools/affiliate-income-calculator/" class="active">Income Calculator</a></li>
+          <li><a href="/tools/affiliate-program-finder/">Program Finder</a></li>
+          <li><a href="/tools/content-brief-generator/">Brief Generator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Build &amp; Learn</h5>
+        <ul>
+          <li><a href="/build-with-ai/">Build With AI</a></li>
+          <li><a href="/workflows/">Workflows</a></li>
+          <li><a href="/ai-tools/">AI Tools</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Alternative Entrepreneur. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="https://davidjwoodbury.com/">About</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('hamburger');
+  const siteNav = document.getElementById('site-nav');
+  hamburger.addEventListener('click', () => {
+    const open = siteNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  /* ── Input refs ── */
+  const inputs = {
+    visitors:   { range: document.getElementById('r-visitors'), num: document.getElementById('n-visitors'), disp: document.getElementById('v-visitors') },
+    ctr:        { range: document.getElementById('r-ctr'),      num: document.getElementById('n-ctr'),      disp: document.getElementById('v-ctr') },
+    cvr:        { range: document.getElementById('r-cvr'),      num: document.getElementById('n-cvr'),      disp: document.getElementById('v-cvr') },
+    commission: { num: document.getElementById('n-commission') },
+    aov:        { num: document.getElementById('n-aov') },
+    commrate:   { num: document.getElementById('n-commrate') },
+  };
+
+  function fmt(n, decimals = 0) {
+    return n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  }
+  function fmtMoney(n) {
+    if (n >= 1000000) return '$' + fmt(n / 1000000, 2) + 'M';
+    if (n >= 1000) return '$' + fmt(n / 1000, 1) + 'K';
+    return '$' + fmt(n, 2);
+  }
+  function fmtMoneyFull(n) {
+    return '$' + fmt(n, 2);
+  }
+
+  function getVal(id) {
+    return parseFloat(document.getElementById(id).value) || 0;
+  }
+
+  function calcCommission() {
+    const aov = getVal('n-aov');
+    const rate = getVal('n-commrate');
+    const flat = getVal('n-commission');
+    if (aov > 0 && rate > 0) return aov * (rate / 100);
+    return flat;
+  }
+
+  function calculate() {
+    const visitors   = getVal('n-visitors');
+    const ctrPct     = getVal('n-ctr');
+    const cvrPct     = getVal('n-cvr');
+    const commission = calcCommission();
+
+    const clicks      = visitors * (ctrPct / 100);
+    const conversions = clicks * (cvrPct / 100);
+    const monthly     = conversions * commission;
+    const annual      = monthly * 12;
+
+    // Update result cards
+    document.getElementById('res-monthly').textContent = fmtMoney(monthly);
+    document.getElementById('res-monthly-sub').textContent =
+      fmt(conversions, 1) + ' sales × ' + fmtMoneyFull(commission) + ' commission';
+    document.getElementById('res-annual').textContent = fmtMoney(annual);
+
+    // Update breakdown
+    document.getElementById('bd-visitors').textContent = fmt(visitors);
+    document.getElementById('bd-ctr-pct').textContent  = fmt(ctrPct, 1) + '%';
+    document.getElementById('bd-clicks').textContent   = fmt(clicks, 0);
+    document.getElementById('bd-cvr-pct').textContent  = fmt(cvrPct, 1) + '%';
+    document.getElementById('bd-conversions').textContent = fmt(conversions, 1);
+    document.getElementById('bd-commission').textContent  = fmtMoneyFull(commission);
+    document.getElementById('bd-monthly').textContent     = fmtMoneyFull(monthly);
+
+    // Scenarios
+    const scenarios = [
+      { label: '¼ of current traffic',   mult: 0.25 },
+      { label: '½ of current traffic',   mult: 0.5  },
+      { label: 'Current',                mult: 1,    current: true },
+      { label: '2× traffic',             mult: 2    },
+      { label: '5× traffic',             mult: 5    },
+      { label: '10× traffic',            mult: 10   },
+    ];
+
+    const tbody = document.getElementById('scenario-tbody');
+    tbody.innerHTML = scenarios.map(s => {
+      const v = visitors * s.mult;
+      const cl = v * (ctrPct / 100);
+      const cv = cl * (cvrPct / 100);
+      const mo = cv * commission;
+      const an = mo * 12;
+      const cls = s.current ? ' class="current-row"' : '';
+      return `<tr${cls}>
+        <td>${s.label}</td>
+        <td>${fmt(v)}</td>
+        <td>${fmt(cl, 0)}</td>
+        <td>${fmt(cv, 1)}</td>
+        <td>${fmtMoney(mo)}</td>
+        <td>${fmtMoney(an)}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  /* ── Sync range ↔ number inputs ── */
+  function syncRangeToNum(rangeEl, numEl, dispEl, formatFn) {
+    rangeEl.addEventListener('input', () => {
+      numEl.value = rangeEl.value;
+      dispEl.textContent = formatFn(parseFloat(rangeEl.value));
+      calculate();
+    });
+    numEl.addEventListener('input', () => {
+      const v = parseFloat(numEl.value);
+      if (!isNaN(v)) {
+        rangeEl.value = Math.min(Math.max(v, parseFloat(rangeEl.min)), parseFloat(rangeEl.max));
+        dispEl.textContent = formatFn(v);
+      }
+      calculate();
+    });
+  }
+
+  syncRangeToNum(inputs.visitors.range, inputs.visitors.num, inputs.visitors.disp,
+    v => fmt(v));
+  syncRangeToNum(inputs.ctr.range, inputs.ctr.num, inputs.ctr.disp,
+    v => fmt(v, 1) + '%');
+  syncRangeToNum(inputs.cvr.range, inputs.cvr.num, inputs.cvr.disp,
+    v => fmt(v, 1) + '%');
+
+  document.getElementById('n-commission').addEventListener('input', calculate);
+  document.getElementById('n-aov').addEventListener('input', calculate);
+  document.getElementById('n-commrate').addEventListener('input', calculate);
+
+  calculate();
+</script>
+</body>
+</html>

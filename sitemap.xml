@@ -1,222 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages -->
+  <!-- ══ Core Pages ══ -->
   <url>
     <loc>https://alternativeentrepreneur.com/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alternativeentrepreneur.com/blog/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://alternativeentrepreneur.com/start-here/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alternativeentrepreneur.com/privacy.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://alternativeentrepreneur.com/about/</loc>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/resources/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/privacy.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://alternativeentrepreneur.com/terms.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Tools & Free Resources -->
+  <!-- ══ Pillar Hubs ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/affiliate-marketing/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/build-with-ai/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/workflows/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/blog/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ══ Free Tools ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/tools/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://alternativeentrepreneur.com/tools/ai-prompt-templates/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Pillar Hubs -->
   <url>
-    <loc>https://alternativeentrepreneur.com/affiliate-marketing/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/build-with-ai/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/workflows/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Affiliate Marketing Articles -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/affiliate-marketing/affiliate-marketing-niche-research/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://alternativeentrepreneur.com/tools/affiliate-income-calculator/</loc>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alternativeentrepreneur.com/affiliate-marketing/how-to-find-affiliate-products-to-promote/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://alternativeentrepreneur.com/tools/affiliate-program-finder/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/tools/content-brief-generator/</loc>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- AI Tools Articles -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/suno-ai-review/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/sora-ai-video-generator-review/</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/ai-content-creation-workflow/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Build With AI Articles -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/build-with-ai/build-affiliate-site-nextjs/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/build-with-ai/vercel-vs-netlify-for-affiliate-sites/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/build-with-ai/how-to-build-an-affiliate-website-with-ai/</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/build-with-ai/programmatic-seo-affiliate-site/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Workflow Articles -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/workflows/affiliate-marketing-workflow/</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/workflows/how-i-find-products-to-promote/</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/workflows/how-to-automate-affiliate-marketing-with-ai/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Tools / Old Page Preserved -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/tools/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- New Pages: March 2026 Expansion -->
-  <url>
-    <loc>https://alternativeentrepreneur.com/start-here/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/resources/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/about/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/income-reports/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/income-reports/march-2026/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-writing-tools-for-affiliate-marketing/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/claude-vs-chatgpt-for-content-creation/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/best-seo-tools-for-affiliate-sites/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/blog/how-to-make-money-online-with-ai/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/blog/alternative-income-streams/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Previously missing pages — now created -->
+  <!-- ══ Affiliate Marketing Articles ══ -->
   <url>
     <loc>https://alternativeentrepreneur.com/affiliate-marketing/affiliate-marketing-for-beginners/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/affiliate-marketing/affiliate-marketing-niche-research/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alternativeentrepreneur.com/affiliate-marketing/best-affiliate-programs-2026/</loc>
@@ -231,25 +129,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://alternativeentrepreneur.com/affiliate-marketing/how-to-find-affiliate-products-to-promote/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://alternativeentrepreneur.com/affiliate-marketing/how-to-start-affiliate-marketing-with-no-audience/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ══ AI Tools Articles ══ -->
   <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-tools-for-content-creators-2026/</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/ai-tools-for-affiliate-marketing/</loc>
+    <loc>https://alternativeentrepreneur.com/ai-tools/ai-content-creation-workflow/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-writing-tools-for-bloggers/</loc>
+    <loc>https://alternativeentrepreneur.com/ai-tools/ai-tools-for-affiliate-marketing/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -261,7 +161,95 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-tools-for-content-creators-2026/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-writing-tools-for-affiliate-marketing/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/best-ai-writing-tools-for-bloggers/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/best-seo-tools-for-affiliate-sites/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/claude-vs-chatgpt-for-content-creation/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/sora-ai-video-generator-review/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/ai-tools/suno-ai-review/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ══ Build With AI Articles ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/build-with-ai/build-affiliate-site-nextjs/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/build-with-ai/how-to-build-an-affiliate-website-with-ai/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/build-with-ai/programmatic-seo-affiliate-site/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/build-with-ai/vercel-vs-netlify-for-affiliate-sites/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ══ Workflow Articles ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/workflows/affiliate-marketing-workflow/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://alternativeentrepreneur.com/workflows/entrepreneur-ai-tools-stack-2026/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/workflows/how-i-find-products-to-promote/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/workflows/how-to-automate-affiliate-marketing-with-ai/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -272,6 +260,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ══ Blog Articles ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/blog/alternative-income-streams/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/blog/how-to-make-money-online-with-ai/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ══ Standalone Landing Pages ══ -->
   <url>
     <loc>https://alternativeentrepreneur.com/make-money-online-with-ai-2026/</loc>
     <lastmod>2026-03-02</lastmod>
@@ -283,6 +287,20 @@
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- ══ Income Reports ══ -->
+  <url>
+    <loc>https://alternativeentrepreneur.com/income-reports/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/income-reports/march-2026/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

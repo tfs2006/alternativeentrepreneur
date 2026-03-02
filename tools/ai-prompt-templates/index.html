@@ -300,6 +300,30 @@
     .how-to-card h4 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: .3rem; }
     .how-to-card p { font-size: .85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
 
+    /* ── Filter bar ── */
+    .pt-filter-bar { display:flex; align-items:center; gap:.75rem 1rem; flex-wrap:wrap; padding:.25rem 0; margin-bottom:.25rem; }
+    .filter-bar-label { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--text-dim); flex-shrink:0; }
+    .filter-btns { display:flex; gap:.45rem; flex-wrap:wrap; }
+    .filter-btn { padding:.35rem .9rem; font-size:.78rem; font-weight:700; border-radius:999px; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; transition:all .18s; line-height:1; }
+    .filter-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .filter-btn.active { background:var(--accent); border-color:var(--accent); color:#0d0f14; }
+    .template-card.hidden-by-filter { display:none; }
+    .filter-count { font-size:.75rem; color:var(--text-dim); margin-left:.25rem; }
+
+    /* ── Variable inputs ── */
+    .var-inputs-grid { display:grid; grid-template-columns:1fr 1fr; gap:.55rem .75rem; margin-bottom:.6rem; }
+    @media (max-width:560px) { .var-inputs-grid { grid-template-columns:1fr; } }
+    .var-input-group { display:flex; flex-direction:column; gap:.2rem; }
+    .var-input-group.full-width { grid-column:1/-1; }
+    .var-input-label { font-family:var(--font-mono); font-size:.68rem; color:#a78bfa; letter-spacing:.02em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .var-input, .var-textarea { background:#0b0d12; border:1px solid var(--border); border-radius:6px; padding:.4rem .65rem; font-size:.8rem; color:var(--text); font-family:var(--font-sans); transition:border-color .18s; width:100%; }
+    .var-input:focus, .var-textarea:focus { outline:none; border-color:rgba(124,92,252,0.5); box-shadow:0 0 0 2px rgba(124,92,252,0.08); }
+    .var-input::placeholder, .var-textarea::placeholder { color:var(--text-dim); font-size:.77rem; }
+    .var-textarea { min-height:62px; resize:vertical; }
+    .reset-vars-btn { font-size:.71rem; font-weight:600; color:var(--text-dim); background:none; border:none; cursor:pointer; padding:.1rem 0; letter-spacing:.03em; transition:color .18s; display:inline-flex; align-items:center; gap:.3rem; }
+    .reset-vars-btn:hover { color:var(--accent); }
+    .prompt-block .ph--filled { color:#34d399 !important; font-style:normal !important; background:rgba(52,211,153,0.1); border-radius:3px; padding:0 3px; }
+
     /* ── Print / PDF styles ── */
     @media print {
       @page { margin: 18mm 15mm; size: A4; }
@@ -520,7 +544,19 @@
   <!-- ─────────────────────────────────────────────
        TEMPLATE 1 — SITE ARCHITECTURE
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t1" style="margin-top:2.5rem;">
+  <!-- Filter Bar -->
+  <div class="pt-filter-bar no-print" id="filter-bar" style="margin-top:2rem;">
+    <span class="filter-bar-label">Filter:</span>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">All 7 Templates</button>
+      <button class="filter-btn" data-filter="planning">Planning &amp; Research</button>
+      <button class="filter-btn" data-filter="content">Content Writing</button>
+      <button class="filter-btn" data-filter="seo">SEO</button>
+      <button class="filter-btn" data-filter="code">Code &amp; Build</button>
+    </div>
+  </div>
+
+  <div class="template-card" id="t1" data-tags="planning" style="margin-top:2rem;">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">1</div>
@@ -602,7 +638,7 @@ Format all output with clear section headers and use tables where applicable.</p
   <!-- ─────────────────────────────────────────────
        TEMPLATE 2 — COMPLETE HTML ARTICLE PAGE
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t2">
+  <div class="template-card" id="t2" data-tags="code">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">2</div>
@@ -704,7 +740,7 @@ Output the complete HTML file. Do not truncate or summarise any section.</pre>
   <!-- ─────────────────────────────────────────────
        TEMPLATE 3 — NICHE RESEARCH
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t3">
+  <div class="template-card" id="t3" data-tags="planning">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">3</div>
@@ -785,7 +821,7 @@ Use tables wherever data is tabular. Be precise — no vague generalisations.</p
   <!-- ─────────────────────────────────────────────
        TEMPLATE 4 — NEXT.JS SCAFFOLD
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t4">
+  <div class="template-card" id="t4" data-tags="code">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">4</div>
@@ -902,7 +938,7 @@ Code must be production-quality. No demo/placeholder logic in critical component
   <!-- ─────────────────────────────────────────────
        TEMPLATE 5 — SEO AUDIT
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t5">
+  <div class="template-card" id="t5" data-tags="seo">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">5</div>
@@ -1004,7 +1040,7 @@ Format output as a numbered checklist with Before/After rewrites clearly marked.
   <!-- ─────────────────────────────────────────────
        TEMPLATE 6 — COMPARISON / REVIEW ARTICLE
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t6">
+  <div class="template-card" id="t6" data-tags="content">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">6</div>
@@ -1105,7 +1141,7 @@ Add a note at the end listing: 5 specific facts or claims in this article that I
   <!-- ─────────────────────────────────────────────
        TEMPLATE 7 — CONTENT BRIEF
   ───────────────────────────────────────────── -->
-  <div class="template-card" id="t7">
+  <div class="template-card" id="t7" data-tags="content seo">
     <div class="template-card-header">
       <div class="template-card-meta">
         <div class="template-card-num">7</div>
@@ -1309,11 +1345,186 @@ Format all deliverables clearly with section headers. This brief will be handed 
     hamburger.setAttribute('aria-expanded', open);
   });
 
+  /* ── Template variable definitions ── */
+  const TEMPLATE_VARS = {
+    't1-prompt': [
+      { key: 'NICHE', hint: 'e.g., AI productivity tools for freelancers' },
+      { key: 'AUDIENCE', hint: 'e.g., freelancers wanting to work faster with AI' },
+      { key: 'BUDGET', hint: 'e.g., $0\u2013$50/month' },
+      { key: 'TECH STACK', hint: 'e.g., static HTML on Cloudflare Pages' },
+    ],
+    't2-prompt': [
+      { key: 'H1 TITLE', hint: 'e.g., Best AI Writing Tools for Affiliates' },
+      { key: 'PRIMARY KEYWORD', hint: 'e.g., best AI writing tools for affiliate marketing' },
+      { key: 'URL SLUG', hint: 'e.g., /ai-tools/best-ai-writing-tools/' },
+      { key: 'CONTENT TYPE', hint: 'Ultimate Guide / Comparison / Review / How-To' },
+      { key: 'PRODUCT 1', hint: 'e.g., Claude' },
+      { key: 'PRODUCT 2', hint: 'e.g., ChatGPT' },
+      { key: 'PRODUCT 3', hint: 'e.g., Jasper' },
+      { key: 'WORD COUNT', hint: 'e.g., 2,200 words' },
+      { key: 'RELATED PAGE 1', hint: 'Title and URL of internal link' },
+      { key: 'RELATED PAGE 2', hint: 'Title and URL of internal link' },
+      { key: 'SITE NAME', hint: 'e.g., Alternative Entrepreneur' },
+      { key: 'AUTHOR NAME', hint: 'Your name' },
+      { key: 'DATE', hint: 'e.g., 2026-03-10' },
+    ],
+    't3-prompt': [
+      { key: 'NICHE TOPIC', hint: 'e.g., email marketing tools for small businesses' },
+      { key: 'AUDIENCE', hint: 'e.g., small business owners, not technical' },
+      { key: 'COMMISSION', hint: 'e.g., $40 per conversion' },
+    ],
+    't4-prompt': [
+      { key: 'SITE NAME', hint: 'e.g., TechAffiliate' },
+      { key: 'DOMAIN', hint: 'e.g., techaffiliate.com' },
+      { key: 'NICHE', hint: 'e.g., SaaS productivity tools' },
+      { key: 'PRIMARY COLOR', hint: 'e.g., #00e07a' },
+      { key: 'BG COLOR', hint: 'e.g., #0d0f14 (dark) or #ffffff (light)' },
+      { key: 'EMAIL PROVIDER', hint: 'e.g., Kit / Beehiiv / Mailchimp' },
+      { key: 'AUTHOR', hint: 'Your name' },
+    ],
+    't5-prompt': [
+      { key: 'TARGET KEYWORD', hint: 'e.g., best email marketing tools for small business' },
+      { key: 'SECONDARY KEYWORDS', hint: 'optional \u2014 comma separated' },
+      { key: 'PAGE URL', hint: 'e.g., https://mysite.com/best-email-tools/' },
+      { key: 'CONTENT TYPE', hint: 'listicle / guide / comparison / review / how-to' },
+      { key: 'CURRENT TITLE', hint: 'optional \u2014 your existing title tag' },
+      { key: 'PASTE YOUR FULL ARTICLE HTML OR PLAIN TEXT HERE', hint: 'paste your full article text here', isTextarea: true },
+    ],
+    't6-prompt': [
+      { key: 'ARTICLE TYPE', hint: 'X vs Y / Best X for Y Roundup / Single Product Review' },
+      { key: 'TARGET KEYWORD', hint: 'e.g., Claude vs ChatGPT for content creation' },
+      { key: 'PRODUCT 1', hint: 'e.g., Claude' },
+      { key: 'PRODUCT 2', hint: 'e.g., ChatGPT' },
+      { key: 'PRODUCT 3', hint: 'optional \u2014 leave blank if N/A' },
+      { key: 'AUDIENCE', hint: 'e.g., affiliate bloggers wanting to go faster with AI' },
+      { key: 'UNIQUE ANGLE', hint: 'e.g., 60 days real usage data, not spec sheets' },
+      { key: 'WORD COUNT', hint: 'e.g., 2,500 words' },
+      { key: 'DATE', hint: 'e.g., March 2026' },
+      { key: '2 niche-specific features', hint: 'e.g., Output Quality, API Access' },
+    ],
+    't7-prompt': [
+      { key: 'TARGET KEYWORD', hint: 'e.g., how to start affiliate marketing with no audience' },
+      { key: 'SECONDARY KEYWORDS', hint: 'optional \u2014 comma separated' },
+      { key: 'CONTENT TYPE', hint: 'guide / how-to / listicle / comparison / case study' },
+      { key: 'NICHE', hint: 'e.g., affiliate marketing and online business' },
+      { key: 'AUDIENCE', hint: 'e.g., complete beginners with no website or following' },
+      { key: 'AFFILIATE PRODUCTS', hint: 'e.g., Ahrefs, Surfer SEO, ConvertKit' },
+      { key: 'SITE AUTHORITY', hint: 'e.g., DA 5 \u2014 new site  or  DA 30 \u2014 established' },
+    ],
+  };
+
+  /* ── Initialize variable substitution inputs ── */
+  function initVarInputs() {
+    Object.entries(TEMPLATE_VARS).forEach(([promptId, vars]) => {
+      const promptEl = document.getElementById(promptId);
+      if (!promptEl) return;
+
+      // Store original innerHTML for resets
+      promptEl.dataset.originalHtml = promptEl.innerHTML;
+
+      const card = promptEl.closest('.template-card');
+      if (!card) return;
+      const varsSection = card.querySelector('.vars-section');
+      if (!varsSection) return;
+
+      const inputsHtml = vars.map(v => {
+        if (v.isTextarea) {
+          return `<div class="var-input-group full-width">
+            <label class="var-input-label" title="[${v.key}]">[${v.key}]</label>
+            <textarea class="var-input var-textarea" data-var="${v.key}" data-prompt="${promptId}" placeholder="${v.hint}"></textarea>
+          </div>`;
+        }
+        return `<div class="var-input-group">
+          <label class="var-input-label" title="[${v.key}]">[${v.key}]</label>
+          <input type="text" class="var-input" data-var="${v.key}" data-prompt="${promptId}" placeholder="${v.hint}">
+        </div>`;
+      }).join('');
+
+      varsSection.innerHTML = `
+        <div class="vars-section-label">Fill in your details \u2014 prompt updates live</div>
+        <div class="var-inputs-grid">${inputsHtml}</div>
+        <button class="reset-vars-btn" type="button" onclick="resetVars('${promptId}')">\u21bb Reset to original</button>
+      `;
+
+      varsSection.querySelectorAll('.var-input, .var-textarea').forEach(input => {
+        input.addEventListener('input', () => rebuildPrompt(promptId));
+      });
+    });
+  }
+
+  /* ── Rebuild prompt with filled values ── */
+  function rebuildPrompt(promptId) {
+    const promptEl = document.getElementById(promptId);
+    if (!promptEl || !promptEl.dataset.originalHtml) return;
+
+    // Restore original HTML (resets all spans to their original state)
+    promptEl.innerHTML = promptEl.dataset.originalHtml;
+
+    const card = promptEl.closest('.template-card');
+    if (!card) return;
+
+    card.querySelectorAll('[data-var]').forEach(input => {
+      const val = (input.value || '').trim();
+      if (!val) return;
+      const varKey = input.dataset.var;
+
+      promptEl.querySelectorAll('.ph').forEach(span => {
+        const txt = span.textContent;
+        // Match: span text starts with [VARKEY] or [VARKEY space/dash/em-dash variants
+        if (
+          txt === '[' + varKey + ']' ||
+          txt.startsWith('[' + varKey + ' ') ||
+          txt.startsWith('[' + varKey + ' \u2014') ||
+          txt.startsWith('[' + varKey + '\u00a0') ||
+          txt.toLowerCase().startsWith('[' + varKey.toLowerCase() + ' ') ||
+          txt.toLowerCase().startsWith('[' + varKey.toLowerCase() + ']')
+        ) {
+          span.textContent = val;
+          span.classList.add('ph--filled');
+        }
+      });
+    });
+  }
+
+  /* ── Reset vars for a template ── */
+  function resetVars(promptId) {
+    const promptEl = document.getElementById(promptId);
+    if (promptEl && promptEl.dataset.originalHtml) {
+      promptEl.innerHTML = promptEl.dataset.originalHtml;
+    }
+    const card = promptEl ? promptEl.closest('.template-card') : null;
+    if (card) {
+      card.querySelectorAll('[data-var]').forEach(input => { input.value = ''; });
+    }
+  }
+
+  /* ── Filter ── */
+  function initFilter() {
+    const filterBar = document.getElementById('filter-bar');
+    if (!filterBar) return;
+
+    filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.template-card').forEach(card => {
+          if (filter === 'all') {
+            card.classList.remove('hidden-by-filter');
+          } else {
+            const tags = (card.dataset.tags || '').split(' ');
+            card.classList.toggle('hidden-by-filter', !tags.includes(filter));
+          }
+        });
+      });
+    });
+  }
+
   /* ── Copy single template ── */
   function copyTemplate(id, btn) {
     const el = document.getElementById(id);
     if (!el) return;
-    // Get the raw text content (strips HTML tags used for syntax highlighting)
     const text = el.innerText || el.textContent;
     navigator.clipboard.writeText(text.trim()).then(() => {
       const orig = btn.innerHTML;
@@ -1324,7 +1535,6 @@ Format all deliverables clearly with section headers. This brief will be handed 
         btn.innerHTML = orig;
       }, 2200);
     }).catch(() => {
-      // Fallback for older browsers
       const range = document.createRange();
       range.selectNodeContents(el);
       const sel = window.getSelection();
@@ -1351,7 +1561,7 @@ Format all deliverables clearly with section headers. This brief will be handed 
     ];
     const divider = '\n\n' + '='.repeat(72) + '\n\n';
     const header = 'AI PROMPT TEMPLATES FOR BUILDING AFFILIATE WEBSITES\nfrom AlternativeEntrepreneur.com\n' + '='.repeat(72) + '\n\n';
-    
+
     const all = header + ids.map((id, i) => {
       const el = document.getElementById(id);
       return titles[i] + '\n' + '-'.repeat(50) + '\n\n' + (el ? (el.innerText || el.textContent).trim() : '');
@@ -1361,7 +1571,7 @@ Format all deliverables clearly with section headers. This brief will be handed 
       ['copy-all-btn','copy-all-btn-2'].forEach(btnId => {
         const b = document.getElementById(btnId);
         if (b) {
-          b.textContent = '✓ All Copied!';
+          b.textContent = '\u2713 All Copied!';
           setTimeout(() => b.textContent = 'Copy All Templates', 2500);
         }
       });
@@ -1372,16 +1582,19 @@ Format all deliverables clearly with section headers. This brief will be handed 
   function downloadPDF() {
     const btn = document.getElementById('pdf-btn');
     if (btn) {
-      btn.textContent = 'Opening print dialog…';
+      btn.textContent = 'Opening print dialog\u2026';
       setTimeout(() => {
         btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download All 7 Templates as PDF`;
       }, 3000);
     }
-    // Small delay so button text updates before print dialog steals focus
-    setTimeout(() => {
-      window.print();
-    }, 150);
+    setTimeout(() => { window.print(); }, 150);
   }
+
+  /* ── Init on load ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    initVarInputs();
+    initFilter();
+  });
 </script>
 </body>
 </html>
