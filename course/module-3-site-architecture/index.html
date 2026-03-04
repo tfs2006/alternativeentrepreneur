@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCWTH1T0M"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCCWTH1T0M');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 3: Site Architecture & Content Map — Free Affiliate Course | Alternative Entrepreneur</title>
+  <meta name="description" content="How to structure your affiliate site so Google understands what you're about. Hub-cluster architecture, AI-generated content maps, internal linking strategy, and keyword-to-page mapping.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://alternativeentrepreneur.com/course/module-3-site-architecture/">
+  <meta property="og:title" content="Module 3: Site Architecture & Content Map — Free Affiliate Course">
+  <meta property="og:url" content="https://alternativeentrepreneur.com/course/module-3-site-architecture/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://alternativeentrepreneur.com/images/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Module 3: Site Architecture & Content Map","url":"https://alternativeentrepreneur.com/course/module-3-site-architecture/","isPartOf":{"@type":"Course","name":"The No-WordPress Affiliate Playbook","url":"https://alternativeentrepreneur.com/course/"},"learningResourceType":"Module","isAccessibleForFree":true}</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.svg">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .lesson-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:2.5rem;flex-wrap:wrap;}
+    .lesson-nav-info{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;}
+    .lesson-nav-title{font-size:.92rem;font-weight:600;color:var(--white);margin-top:.2rem;}
+    .lesson-prev-next{display:flex;gap:.75rem;flex-wrap:wrap;}
+    .module-pill{display:inline-flex;align-items:center;gap:.35rem;background:rgba(0,224,122,0.1);border:1px solid rgba(0,224,122,0.2);border-radius:999px;padding:.25em .9em;font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap;}
+    .module-pill:hover{background:rgba(0,224,122,0.18);text-decoration:none;}
+    .prompt-box{background:var(--bg-card2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:var(--font-mono);font-size:.85rem;color:var(--text);line-height:1.65;position:relative;}
+    .prompt-box::before{content:'Prompt';position:absolute;top:-.65rem;left:1rem;background:var(--bg-card2);padding:0 .5rem;font-size:.7rem;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-sans);}
+    .arch-diagram{background:var(--bg-card2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin:1.5rem 0;font-family:var(--font-mono);font-size:.82rem;line-height:1.9;color:var(--text);}
+    .arch-diagram .d-hub{color:var(--accent);font-weight:700;}
+    .arch-diagram .d-cluster{color:#7c5cfc;}
+    .arch-diagram .d-leaf{color:var(--text-muted);}
+    .page-type-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0;}
+    .page-type-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;}
+    .page-type-card h5{margin:0 0 .35rem;font-size:.85rem;color:var(--white);}
+    .page-type-card p{margin:0;font-size:.8rem;color:var(--text-muted);line-height:1.5;}
+    .il-rule{display:flex;align-items:flex-start;gap:.75rem;padding:.85rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.6rem;}
+    .il-num{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#0d0f14;font-size:.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a>
+      <nav class="site-nav" id="site-nav">
+        <a href="/affiliate-marketing/">Affiliate Marketing</a>
+        <a href="/ai-tools/">AI Tools</a>
+        <a href="/build-with-ai/">Build With AI</a>
+        <a href="/workflows/">Workflows</a>
+        <a href="/course/" class="active">Free Course</a>
+        <a href="/about/" class="nav-cta">About</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container--prose">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/course/">Free Course</a><span class="sep">›</span>
+      <span>Module 3</span>
+    </div>
+    <div class="article-meta">
+      <span class="badge">Free Course</span>
+      <span class="badge badge--purple">Module 3 of 8</span>
+      <span class="date">March 2026</span>
+    </div>
+    <h1 class="article-title">Module 3: Site Architecture &amp; Content Map</h1>
+    <p class="article-desc">How to structure your affiliate site so Google understands what it's about — and users find what they need. Hub-cluster architecture, AI-generated content maps, and an internal linking system that builds topical authority.</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container--prose">
+
+    <div class="lesson-nav">
+      <div>
+        <div class="lesson-nav-info">You are here</div>
+        <div class="lesson-nav-title">Module 3: Site Architecture</div>
+      </div>
+      <div class="lesson-prev-next">
+        <a href="/course/module-2-niche-research/" class="module-pill">← Module 2: Niches</a>
+        <a href="/course/module-4-content-that-ranks/" class="module-pill">Module 4: Content →</a>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h4>In this module</h4>
+      <ol>
+        <li><a href="#why-architecture">Why architecture matters before you write a word</a></li>
+        <li><a href="#hub-cluster">Hub-cluster: the only architecture worth using</a></li>
+        <li><a href="#page-types">The four page types in an affiliate site</a></li>
+        <li><a href="#ai-content-map">Generating your full content map with AI</a></li>
+        <li><a href="#url-structure">URL structure and directory planning</a></li>
+        <li><a href="#internal-linking">Internal linking rules</a></li>
+        <li><a href="#launch-order">What to build first: launch order</a></li>
+        <li><a href="#directory-setup">Setting up your site directory</a></li>
+      </ol>
+    </div>
+
+    <h2 id="why-architecture">Why architecture matters before you write a word</h2>
+    <p>Most new affiliate site builders start by writing articles. They find a keyword, write about it, find another keyword, write about that. After 40 articles, they have a scattered collection of pages that Google can't easily categorize.</p>
+    <p>Google's systems are designed to identify "topical authority" — sites that have comprehensive, organized coverage of a subject. A site with 40 random articles in a niche looks different to Google than a site with 40 articles organized into deliberate clusters around core topics. The organized site earns trust faster and tends to rank more pages.</p>
+    <p>Architecture decisions made early — URL structure, category (hub) pages, content clusters — are expensive to change later. Changing URL structures after you have rankings requires 301 redirects and causes ranking fluctuations. Getting this right up front is worth the planning time.</p>
+
+    <h2 id="hub-cluster">Hub-cluster: the only architecture worth using</h2>
+    <p>The hub-cluster model (also called pillar-cluster or topic cluster) organizes your content into three levels:</p>
+
+    <div class="arch-diagram">
+      <span class="d-hub">Hub (Pillar) Page</span> — /best-project-management-software/<br>
+      <span style="margin-left:1.5rem;">↓</span><br>
+      <span style="margin-left:1.5rem;" class="d-cluster">Cluster Article</span> — /best-pm-software-for-small-teams/<br>
+      <span style="margin-left:1.5rem;" class="d-cluster">Cluster Article</span> — /project-management-software-vs-spreadsheets/<br>
+      <span style="margin-left:1.5rem;" class="d-cluster">Cluster Article</span> — /asana-vs-clickup/<br>
+      <span style="margin-left:1.5rem;">↓</span><br>
+      <span style="margin-left:1.5rem;" class="d-leaf">Supporting Article</span> — /asana-review/<br>
+      <span style="margin-left:1.5rem;" class="d-leaf">Supporting Article</span> — /clickup-pricing/<br>
+      <span style="margin-left:1.5rem;" class="d-leaf">Supporting Article</span> — /asana-integrations/
+    </div>
+
+    <p>Each level serves a different purpose:</p>
+    <ul>
+      <li><strong>Hub/Pillar pages:</strong> Target the broad, high-volume head term for a topic. Comprehensive, 2,000–4,000 words. Link out to all cluster articles below them.</li>
+      <li><strong>Cluster articles:</strong> Target specific comparison, best-for, or how-to queries within the topic. 1,200–2,500 words. Link back up to the hub and sideways to related clusters.</li>
+      <li><strong>Supporting articles:</strong> Target narrow, long-tail queries. Reviews, pricing breakdowns, specific feature explanations. 800–1,500 words. Link up to relevant cluster articles.</li>
+    </ul>
+    <p>For a new site, you want at least 2–3 full clusters before publishing. Launching with 5 scattered articles doesn't establish topical authority. Launching with 15 tightly organized articles in one cluster does.</p>
+
+    <h2 id="page-types">The four page types in an affiliate site</h2>
+    <div class="page-type-grid">
+      <div class="page-type-card">
+        <h5>Best-of Roundups</h5>
+        <p>Highest conversion potential. "Best X for Y" format. Compares 5–10 products with a clear winner recommendation. Include pricing tables, feature comparisons, pros/cons.</p>
+      </div>
+      <div class="page-type-card">
+        <h5>Head-to-Head Comparisons</h5>
+        <p>"A vs B" pages. Very high purchase intent — people searching this are nearly ready to buy. Target every major product comparison in your niche.</p>
+      </div>
+      <div class="page-type-card">
+        <h5>Individual Product Reviews</h5>
+        <p>In-depth review of a single product. Target "[product name] review" queries. Important for E-E-A-T signal — Google wants to see genuine product experience.</p>
+      </div>
+      <div class="page-type-card">
+        <h5>How-To / Informational</h5>
+        <p>Supports topical authority. Attracts top-of-funnel readers. Less direct conversion value but builds the authority signal that helps your commercial pages rank.</p>
+      </div>
+    </div>
+
+    <p>The ratio that works well for new sites: 40% best-of/roundup, 30% comparisons, 20% reviews, 10% how-to. As you grow, you can add more informational content to build broader topical authority.</p>
+
+    <h2 id="ai-content-map">Generating your full content map with AI</h2>
+    <p>Once you've chosen your niche, this prompt generates a comprehensive content map — enough articles to cover the niche properly and establish topical authority:</p>
+
+    <div class="prompt-box">I'm building an affiliate site in the [your niche] space. My target audience is [describe audience — e.g., "small business owners looking for project management software"]. 
+
+Generate a complete content map organized as hub-cluster architecture. Structure it as follows:
+
+For each hub topic (create 3 hubs):
+- Hub page title and target keyword
+- 6 cluster articles with titles and target keywords, organized as:
+  - 2 best-of roundup pages
+  - 2 comparison pages
+  - 1 review page
+  - 1 how-to/informational page
+- For each cluster article, estimate buyer intent (high/medium/low)
+
+Also include:
+- 3 additional standalone comparison pages targeting "[Product A] vs [Product B]" queries
+- 1 suggested site structure (top-level categories/directories)
+
+Format the output as a structured list I can use as a content production plan.</div>
+
+    <p>Save the output from this prompt. It becomes your content production backlog. Don't treat it as a fixed schedule — you'll constantly add, reorder, and deprioritize based on what you discover from Google Search Console once the site is live. But having this map means you're never staring at a blank "what should I write next?" screen.</p>
+
+    <div class="callout callout--tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-body">
+        <strong>Validate the content map against real keyword data</strong>
+        <p>AI will generate plausible-sounding titles but it doesn't have real search volume data. After you have the map, spot-check 20–30 of the suggested keywords in Ahrefs or Google Keyword Planner. You'll find some are real queries with volume and some are AI inventions. Remove or modify the ones with no real search demand.</p>
+      </div>
+    </div>
+
+    <h2 id="url-structure">URL structure and directory planning</h2>
+    <p>Clean, logical URLs serve two purposes: readability for humans and clarity for search engines. Affiliate sites should use flat, descriptive URLs without dates or deep nesting.</p>
+
+    <p>Recommended URL patterns:</p>
+    <ul>
+      <li>Hub page: <code>/best-project-management-software/</code></li>
+      <li>Cluster article: <code>/asana-vs-clickup/</code> or <code>/best-pm-software-for-small-teams/</code></li>
+      <li>Review: <code>/asana-review/</code></li>
+      <li>How-to: <code>/how-to-set-up-asana-for-your-team/</code></li>
+    </ul>
+
+    <p>Note: the URLs above are flat — they're all at the root level, not in subdirectories like <code>/reviews/asana-review/</code>. Flat structure is simpler from a crawling standpoint and avoids the "which directory gets the link equity" problem.</p>
+    <p>Exception: if your site covers multiple distinct verticals (e.g., both project management software AND email marketing software), use top-level directories to segment them: <code>/project-management/</code> and <code>/email-marketing/</code>. This helps Google understand the topical organization.</p>
+
+    <h2 id="internal-linking">Internal linking rules</h2>
+    <p>Internal linking is how you signal to Google which pages are important and how topics relate. Most affiliate sites under-link — they have dozens of articles that are essentially isolated from each other.</p>
+
+    <div class="il-rule">
+      <div class="il-num">1</div>
+      <div><strong>Every cluster article links up to its hub page.</strong> This transfers authority from the supporting content to the pillar page you most want to rank for the head term.</div>
+    </div>
+    <div class="il-rule">
+      <div class="il-num">2</div>
+      <div><strong>Every hub page links out to its cluster articles.</strong> Creates a link loop that distributes authority throughout the cluster and signals comprehensiveness.</div>
+    </div>
+    <div class="il-rule">
+      <div class="il-num">3</div>
+      <div><strong>Use descriptive anchor text, not "click here".</strong> The anchor text tells Google what the linked page is about. "Best project management software for small teams" is better than "see our comparison".</div>
+    </div>
+    <div class="il-rule">
+      <div class="il-num">4</div>
+      <div><strong>Link laterally within clusters.</strong> "Asana vs ClickUp" should link to both the Asana review and the ClickUp review. This creates a web of relevance within the topic cluster.</div>
+    </div>
+    <div class="il-rule">
+      <div class="il-num">5</div>
+      <div><strong>Add internal links when new pages go live.</strong> Every new page you publish is an opportunity to go back and add a relevant link from an existing page. This is commonly skipped and is one of the easiest wins available.</div>
+    </div>
+
+    <h2 id="launch-order">What to build first: launch order</h2>
+    <p>Don't try to launch with 50 articles. Launch with a complete, tightly organized cluster of 12–15 pages. Here's the order:</p>
+    <ol>
+      <li><strong>Write the hub page first.</strong> This is your most important page — the one targeting the head keyword. It sets the topical frame for the whole cluster.</li>
+      <li><strong>Write the 2–3 highest buyer-intent cluster articles.</strong> The "best X for Y" and "[A] vs [B]" comparisons that are most likely to convert. These are the money pages.</li>
+      <li><strong>Write supporting reviews for the tools you're comparing.</strong> If you're writing "[A] vs [B]", you need a standalone [A] review and [B] review. They substantiate your comparison and capture additional search queries.</li>
+      <li><strong>Add 2–3 informational how-to articles</strong> to complete the cluster and signal topical depth.</li>
+      <li><strong>Publish all of them at once</strong> (or within a 1–2 week window). Don't drip them out. Google needs to crawl enough content at once to start forming an understanding of your site's topic.</li>
+    </ol>
+
+    <h2 id="directory-setup">Setting up your site directory</h2>
+    <p>For a static HTML site, your directory structure mirrors your URL structure. Here's what this looks like in practice:</p>
+
+    <div class="arch-diagram">
+      /  (root — homepage)<br>
+      /best-project-management-software/index.html  ← hub page<br>
+      /asana-vs-clickup/index.html  ← comparison<br>
+      /best-pm-software-for-small-teams/index.html  ← roundup<br>
+      /asana-review/index.html  ← review<br>
+      /clickup-review/index.html  ← review<br>
+      /how-to-set-up-asana/index.html  ← how-to<br>
+      /css/styles.css  ← shared stylesheet<br>
+      /images/  ← shared images
+    </div>
+
+    <p>Each "page" is a directory containing an <code>index.html</code> file. This is what makes clean URLs work — your browser requests <code>/asana-vs-clickup/</code> and the server returns the <code>index.html</code> inside that directory, with no file extension visible in the URL.</p>
+
+    <div class="callout callout--info">
+      <div class="callout-icon">ℹ️</div>
+      <div class="callout-body">
+        <strong>For Next.js sites</strong>
+        <p>The structure is the same conceptually, but each page is a <code>.jsx</code> or <code>.tsx</code> file inside the <code>app/</code> or <code>pages/</code> directory rather than an HTML file in a folder. <code>app/asana-vs-clickup/page.tsx</code> generates the <code>/asana-vs-clickup/</code> URL.</p>
+      </div>
+    </div>
+
+    <h3>Module 3 action steps</h3>
+    <ol>
+      <li>Run the AI content map prompt for your chosen niche</li>
+      <li>Validate 20–30 of the suggested keywords in Ahrefs/Google Keyword Planner</li>
+      <li>Remove or modify keywords with no real search volume</li>
+      <li>Identify your first full cluster to build (hub + 10–12 articles)</li>
+      <li>Plan your URL structure and create the directory layout on your machine</li>
+      <li>Establish your internal linking plan: which pages will link where</li>
+    </ol>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem;">
+      <a href="/course/module-2-niche-research/" class="btn btn--ghost">← Module 2: Niche Research</a>
+      <a href="/course/module-4-content-that-ranks/" class="btn btn--primary">Module 4: Content That Ranks →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container--prose">
+  <div class="related">
+    <h3>Related Modules</h3>
+    <div class="related-grid">
+      <div class="related-card"><div class="cat">Module 2</div><h4><a href="/course/module-2-niche-research/">AI Niche Research</a></h4></div>
+      <div class="related-card"><div class="cat">Module 4</div><h4><a href="/course/module-4-content-that-ranks/">Content That Ranks</a></h4></div>
+      <div class="related-card"><div class="cat">Build With AI</div><h4><a href="/build-with-ai/how-to-build-a-niche-affiliate-website-2026/">Build a Niche Site in 2026</a></h4></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="affiliate-disclaimer"><strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. If you click through and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools and services I personally use or have thoroughly tested.</div>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a><p>Real workflows, honest AI tool reviews, and affiliate marketing strategies for building income online the alternative way.</p></div>
+      <div class="footer-col"><h5>Free Course</h5><ul><li><a href="/course/">Overview</a></li><li><a href="/course/module-1-stack-setup/">Module 1: Stack</a></li><li><a href="/course/module-2-niche-research/">Module 2: Niches</a></li><li><a href="/course/module-5-llm-seo/">Module 5: LLM SEO</a></li></ul></div>
+      <div class="footer-col"><h5>Tools</h5><ul><li><a href="/tools/ai-prompt-templates/">AI Prompt Templates</a></li><li><a href="/tools/affiliate-income-calculator/">Income Calculator</a></li><li><a href="/tools/affiliate-program-finder/">Program Finder</a></li><li><a href="/tools/content-brief-generator/">Brief Generator</a></li></ul></div>
+      <div class="footer-col"><h5>Build &amp; Learn</h5><ul><li><a href="/build-with-ai/">Build With AI</a></li><li><a href="/workflows/">Workflows</a></li><li><a href="/ai-tools/">AI Tools</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&#x00A9; 2026 Alternative Entrepreneur. All rights reserved.</span><span class="footer-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a><a href="/about/">About</a><a href="/contact/">Contact</a></span></div>
+  </div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',function(){const n=document.getElementById('site-nav');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);});</script>
+</body>
+</html>

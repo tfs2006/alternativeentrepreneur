@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCWTH1T0M"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCCWTH1T0M');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 6: Programmatic SEO for Affiliate Sites — Free Course | Alternative Entrepreneur</title>
+  <meta name="description" content="When and how to use programmatic SEO to scale your affiliate site. Data sources, Next.js static generation, HTML template approach, thin-content risk, and real examples from this site.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://alternativeentrepreneur.com/course/module-6-programmatic-seo/">
+  <meta property="og:title" content="Module 6: Programmatic SEO for Affiliate Sites — Free Course">
+  <meta property="og:url" content="https://alternativeentrepreneur.com/course/module-6-programmatic-seo/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://alternativeentrepreneur.com/images/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Module 6: Programmatic SEO for Affiliate Sites","url":"https://alternativeentrepreneur.com/course/module-6-programmatic-seo/","isPartOf":{"@type":"Course","name":"The No-WordPress Affiliate Playbook","url":"https://alternativeentrepreneur.com/course/"},"learningResourceType":"Module","isAccessibleForFree":true}</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.svg">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .lesson-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:2.5rem;flex-wrap:wrap;}
+    .lesson-nav-info{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;}
+    .lesson-nav-title{font-size:.92rem;font-weight:600;color:var(--white);margin-top:.2rem;}
+    .lesson-prev-next{display:flex;gap:.75rem;flex-wrap:wrap;}
+    .module-pill{display:inline-flex;align-items:center;gap:.35rem;background:rgba(0,224,122,0.1);border:1px solid rgba(0,224,122,0.2);border-radius:999px;padding:.25em .9em;font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap;}
+    .module-pill:hover{background:rgba(0,224,122,0.18);text-decoration:none;}
+    .code-block{background:var(--bg-card2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:var(--font-mono);font-size:.82rem;color:var(--text);line-height:1.75;overflow-x:auto;}
+    .pseo-when-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0;}
+    @media(max-width:600px){.pseo-when-grid{grid-template-columns:1fr;}}
+    .pseo-when-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.15rem 1.25rem;}
+    .pseo-when-card h5{margin:0 0 .5rem;font-size:.85rem;}
+    .pseo-when-card.go{border-color:rgba(0,224,122,.3);}
+    .pseo-when-card.go h5{color:var(--accent);}
+    .pseo-when-card.wait{border-color:rgba(255,80,64,.25);}
+    .pseo-when-card.wait h5{color:#ff5040;}
+    .pseo-when-card ul{margin:0;padding-left:1.25rem;font-size:.82rem;color:var(--text-muted);line-height:1.7;}
+    .risk-row{display:flex;gap:.9rem;padding:.9rem 1rem;border-bottom:1px solid var(--border);align-items:flex-start;}
+    .risk-row:last-child{border-bottom:none;}
+    .risk-icon{font-size:1.1rem;flex-shrink:0;margin-top:.05rem;}
+    .risk-body strong{display:block;font-size:.86rem;color:var(--white);margin-bottom:.2rem;}
+    .risk-body p{margin:0;font-size:.8rem;color:var(--text-muted);line-height:1.5;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a>
+      <nav class="site-nav" id="site-nav">
+        <a href="/affiliate-marketing/">Affiliate Marketing</a>
+        <a href="/ai-tools/">AI Tools</a>
+        <a href="/build-with-ai/">Build With AI</a>
+        <a href="/workflows/">Workflows</a>
+        <a href="/course/" class="active">Free Course</a>
+        <a href="/about/" class="nav-cta">About</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container--prose">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/course/">Free Course</a><span class="sep">›</span>
+      <span>Module 6</span>
+    </div>
+    <div class="article-meta">
+      <span class="badge">Free Course</span>
+      <span class="badge badge--purple">Module 6 of 8</span>
+      <span class="date">March 2026</span>
+    </div>
+    <h1 class="article-title">Module 6: Programmatic SEO for Affiliate Sites</h1>
+    <p class="article-desc">When to go programmatic vs. manual, which data sources to use, how to build the pages (Next.js SSG and static HTML templates), and how to avoid the thin-content trap that tanks most pSEO sites.</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container--prose">
+
+    <div class="lesson-nav">
+      <div>
+        <div class="lesson-nav-info">You are here</div>
+        <div class="lesson-nav-title">Module 6: Programmatic SEO</div>
+      </div>
+      <div class="lesson-prev-next">
+        <a href="/course/module-5-llm-seo/" class="module-pill">← Module 5: LLM SEO</a>
+        <a href="/course/module-7-monetization/" class="module-pill">Module 7: Monetization →</a>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h4>In this module</h4>
+      <ol>
+        <li><a href="#what-is-pseo">What programmatic SEO actually is</a></li>
+        <li><a href="#when-to-go">When to go programmatic (and when not to)</a></li>
+        <li><a href="#data-sources">Data sources for programmatic pages</a></li>
+        <li><a href="#nextjs-approach">Next.js SSG approach</a></li>
+        <li><a href="#html-approach">Static HTML template approach</a></li>
+        <li><a href="#thin-content">The thin-content risk and how to avoid it</a></li>
+        <li><a href="#real-example">Real example: what this site uses</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-is-pseo">What programmatic SEO actually is</h2>
+    <p>Programmatic SEO (pSEO) is the practice of generating large numbers of web pages from structured data using templates. Instead of writing each page manually, you define a template and a data source, and the build process generates hundreds or thousands of pages automatically.</p>
+    <p>Classic examples: Zapier's "how to connect [App A] to [App B]" pages (millions of combinations), NomadList's city profile pages (one template, hundreds of cities), and comparison sites in financial services where every insurance combination gets its own page.</p>
+    <p>For affiliate sites, pSEO is applicable when there's a repeating content pattern — like a review for every product in a defined list, or a comparison page for every possible pair of tools in a category.</p>
+
+    <h2 id="when-to-go">When to go programmatic (and when not to)</h2>
+
+    <div class="pseo-when-grid">
+      <div class="pseo-when-card go">
+        <h5>Go programmatic when:</h5>
+        <ul>
+          <li>You have 50+ items that follow the same template</li>
+          <li>The data exists in a structured format (JSON, CSV, API)</li>
+          <li>Each generated page addresses a distinct, real search query</li>
+          <li>You can enrich pages beyond the base template data</li>
+          <li>You've already established topical authority manually</li>
+        </ul>
+      </div>
+      <div class="pseo-when-card wait">
+        <h5>Don't go programmatic when:</h5>
+        <ul>
+          <li>You have fewer than ~30 items to scale</li>
+          <li>The content is too similar across pages (thin-content risk)</li>
+          <li>You'd be creating pages with no real search demand</li>
+          <li>Your site is brand new with no authority</li>
+          <li>The topic requires nuanced human judgment per-item</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>A common mistake: building a pSEO project before establishing the site's foundation. A new domain with 500 thin programmatically-generated pages and no manual content looks exactly like a spam site to Google. Build 15–30 solid manual pages first, get indexed and some initial traffic, then layer in programmatic content.</p>
+
+    <h2 id="data-sources">Data sources for programmatic pages</h2>
+    <p>The data source is the bottleneck for most pSEO projects. Your options:</p>
+
+    <h3>1. APIs (best option)</h3>
+    <p>APIs give you structured, up-to-date data. For affiliate sites, many affiliate programs offer product APIs: Amazon Product Advertising API, PartnerStack has product data for enrolled programs, and SaaS companies often have public pricing API endpoints. API data can be fetched at build time (for SSG) or cached and refreshed on a schedule.</p>
+
+    <h3>2. Your own structured data (JSON/CSV)</h3>
+    <p>Create and maintain a JSON or CSV file containing the structured data for your pages. For a software comparison site, this might be a <code>tools.json</code> file with fields like name, category, pricing tiers, key features, affiliate link, and your rating. You control the data quality and can add rich fields that no API provides.</p>
+
+    <h3>3. Third-party data aggregators</h3>
+    <p>Sites like G2, Capterra, and Product Hunt publish public data that can inform (but not be directly scraped into) your content. Use this as a reference layer — you still need to add original content that differentiates your pages.</p>
+
+    <h2 id="nextjs-approach">Next.js SSG approach</h2>
+    <p>Next.js with Static Site Generation is the cleanest programmatic SEO stack for affiliate sites that want to scale. Pages are pre-generated at build time, served as static files, and load instantly — no server required.</p>
+
+    <p>The pattern using the App Router:</p>
+    <div class="code-block">// app/tools/[slug]/page.tsx
+
+import { getAllTools, getToolBySlug } from '@/lib/tools'
+
+// This generates all the static paths at build time
+export async function generateStaticParams() {
+  const tools = await getAllTools()
+  return tools.map(tool => ({ slug: tool.slug }))
+}
+
+export default async function ToolPage({ params }) {
+  const tool = await getToolBySlug(params.slug)
+
+  return (
+    &lt;article&gt;
+      &lt;h1&gt;{tool.name} Review {new Date().getFullYear()}&lt;/h1&gt;
+      &lt;p&gt;{tool.description}&lt;/p&gt;
+      {/* Template content continues */}
+    &lt;/article&gt;
+  )
+}</div>
+
+    <p>The <code>lib/tools.ts</code> file reads from your JSON data source or calls an API. At build time, Next.js calls <code>generateStaticParams()</code> for every slug, generates each page as a static HTML file, and deploys the result to Vercel's edge network. Each page loads in under 100ms and is fully crawlable.</p>
+
+    <div class="callout callout--tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-body">
+        <strong>Dynamic OG images</strong>
+        <p>Next.js has a built-in <code>opengraph-image.tsx</code> convention that lets you generate a custom OG image for each programmatic page using the page's data. This makes your shared links look far more professional and is one of the details that differentiates a polished pSEO site from a generic one.</p>
+      </div>
+    </div>
+
+    <h2 id="html-approach">Static HTML template approach</h2>
+    <p>If you're building a static HTML site (like this one), you can still do programmatic SEO without a JavaScript framework. Use a build script to generate HTML files from templates and data.</p>
+
+    <p>A simple approach with Node.js:</p>
+    <div class="code-block">// generate-pages.js
+const fs = require('fs')
+const tools = require('./data/tools.json')
+
+const template = fs.readFileSync('./templates/tool-review.html', 'utf8')
+
+tools.forEach(tool => {
+  const html = template
+    .replace(/{{TOOL_NAME}}/g, tool.name)
+    .replace(/{{TOOL_SLUG}}/g, tool.slug)
+    .replace(/{{TOOL_DESCRIPTION}}/g, tool.description)
+    .replace(/{{TOOL_PRICE}}/g, tool.price)
+    .replace(/{{AFFILIATE_LINK}}/g, tool.affiliateLink)
+
+  // Create the directory and write the file
+  fs.mkdirSync(\`./\${tool.slug}\`, { recursive: true })
+  fs.writeFileSync(\`./\${tool.slug}/index.html\`, html)
+  console.log(\`Generated: ./\${tool.slug}/index.html\`)
+})
+
+console.log(\`Done: \${tools.length} pages generated.\`)</div>
+
+    <p>Run <code>node generate-pages.js</code> when you update your data file, commit the generated HTML files, and deploy. This works perfectly with Cloudflare Pages and requires zero server infrastructure.</p>
+
+    <h2 id="thin-content">The thin-content risk and how to avoid it</h2>
+    <p>Most pSEO sites that get penalized share one characteristic: all pages are nearly identical except for the variable data being inserted. If you search "Asana review" and "ClickUp review" and get pages that are structurally identical except the tool name was swapped in, Google's systems will classify this as thin, low-quality content.</p>
+
+    <p>How to avoid it:</p>
+
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin:1.5rem 0;">
+      <div class="risk-row"><div class="risk-icon">✅</div><div class="risk-body"><strong>Add a unique "editorial take" field to every item in your data</strong><p>Your JSON for each tool should include a <code>editorial_take</code> field — a 2–3 sentence genuine opinion written by a human. This is the one thing that makes each page unique beyond the structured data.</p></div></div>
+      <div class="risk-row"><div class="risk-icon">✅</div><div class="risk-body"><strong>Vary section depth based on available data</strong><p>If you have 5 data points for Tool A and 12 for Tool B, don't pad Tool A with filler content to match. Let the page length naturally reflect available information quality.</p></div></div>
+      <div class="risk-row"><div class="risk-icon">✅</div><div class="risk-body"><strong>Include real pricing data you've verified, not placeholder text</strong><p>Pages that show current, accurate pricing (with a "pricing verified [date]" note) are more valuable and differentiated than pages with generic pricing tables.</p></div></div>
+      <div class="risk-row"><div class="risk-icon">✅</div><div class="risk-body"><strong>Set a quality floor — don't publish pages below it</strong><p>Some tools in your database won't have enough data to justify a page. It's better to skip them and maintain a quality floor than to publish 500 thin pages to get 500 pages indexed.</p></div></div>
+      <div class="risk-row"><div class="risk-icon">🚫</div><div class="risk-body"><strong>Don't generate pages for keywords with no search demand</strong><p>Confirm real search volume exists for each page you're generating. A pSEO project that generates 300 pages for queries nobody searches is just indexing bloat.</p></div></div>
+    </div>
+
+    <h2 id="real-example">Real example: what this site uses</h2>
+    <p>This site is a static HTML site deployed on Cloudflare Pages. Here's how I've used programmatic-style generation on it:</p>
+    <ul>
+      <li>The AI tools section (<code>/ai-tools/</code>) uses a shared template for individual tool reviews — same structure, same CSS classes, same internal linking patterns. Written manually but templated: each review follows the same outline so the production process is fast and consistent.</li>
+      <li>Future plan: a <code>generate-tool-pages.js</code> script that reads from a <code>tools.json</code> data file to auto-generate short "quick profile" pages for the 50+ tools I reference across the site. Each quick profile would link to the full manual review where one exists.</li>
+      <li>The income reports (<code>/income-reports/</code>) use a consistent HTML template — a new month's report is a copy of the previous one with updated numbers and narrative. Effectively manual pSEO at a small scale.</li>
+    </ul>
+
+    <p>The lesson: you don't need to fully automate from day one. Start with a consistent manual template, nail the quality, then automate the generation of that template when volume demands it.</p>
+
+    <h3>Module 6 action steps</h3>
+    <ol>
+      <li>Identify any content type on your site that has 20+ instances following the same pattern</li>
+      <li>Build a <code>data.json</code> file with structured fields for each instance</li>
+      <li>Write a template HTML (or JSX) file with variable placeholders</li>
+      <li>Add an editorial <code>take</code> field to each item — written by you, not AI</li>
+      <li>Write and run the generation script; review 10 generated pages for quality before deploying</li>
+    </ol>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem;">
+      <a href="/course/module-5-llm-seo/" class="btn btn--ghost">← Module 5: LLM SEO</a>
+      <a href="/course/module-7-monetization/" class="btn btn--primary">Module 7: Monetization →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container--prose">
+  <div class="related">
+    <h3>Related Modules</h3>
+    <div class="related-grid">
+      <div class="related-card"><div class="cat">Module 5</div><h4><a href="/course/module-5-llm-seo/">LLM SEO &amp; GEO</a></h4></div>
+      <div class="related-card"><div class="cat">Module 7</div><h4><a href="/course/module-7-monetization/">Monetization</a></h4></div>
+      <div class="related-card"><div class="cat">Build With AI</div><h4><a href="/build-with-ai/programmatic-seo-affiliate-site/">Programmatic SEO Guide</a></h4></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="affiliate-disclaimer"><strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. If you click through and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools and services I personally use or have thoroughly tested.</div>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a><p>Real workflows, honest AI tool reviews, and affiliate marketing strategies for building income online the alternative way.</p></div>
+      <div class="footer-col"><h5>Free Course</h5><ul><li><a href="/course/">Overview</a></li><li><a href="/course/module-1-stack-setup/">Module 1: Stack</a></li><li><a href="/course/module-2-niche-research/">Module 2: Niches</a></li><li><a href="/course/module-5-llm-seo/">Module 5: LLM SEO</a></li></ul></div>
+      <div class="footer-col"><h5>Tools</h5><ul><li><a href="/tools/ai-prompt-templates/">AI Prompt Templates</a></li><li><a href="/tools/affiliate-income-calculator/">Income Calculator</a></li><li><a href="/tools/affiliate-program-finder/">Program Finder</a></li><li><a href="/tools/content-brief-generator/">Brief Generator</a></li></ul></div>
+      <div class="footer-col"><h5>Build &amp; Learn</h5><ul><li><a href="/build-with-ai/">Build With AI</a></li><li><a href="/workflows/">Workflows</a></li><li><a href="/ai-tools/">AI Tools</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&#x00A9; 2026 Alternative Entrepreneur. All rights reserved.</span><span class="footer-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a><a href="/about/">About</a><a href="/contact/">Contact</a></span></div>
+  </div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',function(){const n=document.getElementById('site-nav');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);});</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Alternative Entrepreneur
+
+> A build-in-public affiliate marketing site documenting the process of building modern affiliate sites without WordPress. Covers AI-first content workflows, LLM SEO / GEO optimization, programmatic SEO with static HTML and Next.js, and real monthly income reports from the site itself. Free 8-module course available.
+
+## Core Topics
+- Affiliate Marketing: /affiliate-marketing/
+- AI Tools for Content Creation: /ai-tools/
+- Build With AI (site-building guides): /build-with-ai/
+- Workflows & Automation: /workflows/
+- Free Course — The No-WordPress Affiliate Playbook: /course/
+
+## Free Course Modules
+- Module 1: Foundation & Stack Selection: /course/module-1-stack-setup/
+- Module 2: AI-Powered Niche Research: /course/module-2-niche-research/
+- Module 3: Site Architecture & Content Map: /course/module-3-site-architecture/
+- Module 4: Content That Ranks in 2026: /course/module-4-content-that-ranks/
+- Module 5: LLM SEO & GEO: /course/module-5-llm-seo/
+- Module 6: Programmatic SEO for Affiliate Sites: /course/module-6-programmatic-seo/
+- Module 7: Monetization: /course/module-7-monetization/
+- Module 8: Growth & Iteration: /course/module-8-growth/
+
+## Most Cited Pages
+- Best AI Writing Tools for Bloggers: /ai-tools/best-ai-writing-tools-for-bloggers/ — Comprehensive comparison of AI writing tools for content creators, with hands-on testing notes.
+- How to Build a Niche Affiliate Website in 2026: /build-with-ai/how-to-build-a-niche-affiliate-website-2026/ — Step-by-step guide to building a static HTML affiliate site, including stack selection, hosting, and content architecture.
+- Affiliate Marketing for Beginners: /affiliate-marketing/affiliate-marketing-for-beginners/ — Complete beginner walkthrough covering niche selection, affiliate programs, and content strategy.
+- LLM SEO & GEO for Affiliate Sites: /course/module-5-llm-seo/ — In-depth module on optimizing content for citation by ChatGPT, Perplexity, Google AI Overviews, and other LLM systems.
+- Programmatic SEO for Affiliate Sites: /course/module-6-programmatic-seo/ — When and how to use programmatic page generation for affiliate content at scale.
+- High-Ticket Affiliate Marketing: /affiliate-marketing/high-ticket-affiliate-marketing/ — Guide to finding and promoting high-commission affiliate programs.
+- Best Affiliate Programs 2026: /affiliate-marketing/best-affiliate-programs-2026/ — Curated list of affiliate programs with commission structures and cookie windows.
+
+## About
+Solo-operator affiliate site. Author has direct experience building and monetizing static-HTML affiliate sites using AI-assisted workflows since 2024. Monthly income reports published with screenshots at /income-reports/. The site itself is the case study — all advice is based on what is actually being used to run this site.
+
+## Expertise Areas
+- Building affiliate websites without WordPress (static HTML, Next.js, Cloudflare Pages, Vercel)
+- AI writing workflows for content production (Claude, ChatGPT)
+- LLM SEO / Generative Engine Optimization (GEO) for affiliate sites
+- Programmatic SEO using static site generation
+- Affiliate program selection and monetization strategy
+- Niche research using AI tools and free keyword research tools
+
+## Data & Methodology
+Monthly income reports include actual affiliate dashboard screenshots and Google Search Console data. All tool reviews reflect hands-on use at time of writing. Pricing data is verified at publication and includes verification date.
+
+## Updates
+Updated monthly. Income reports published first of each month at /income-reports/. Course modules updated when significant platform or algorithm changes occur.
+
+## Indexing Guidance
+All content is free and openly accessible. No paywalls. No login required. Affiliate links marked with rel="nofollow sponsored".

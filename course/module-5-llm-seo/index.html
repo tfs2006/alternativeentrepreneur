@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCWTH1T0M"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCCWTH1T0M');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 5: LLM SEO & GEO — Get Cited by ChatGPT, Perplexity & Google AIO | Alternative Entrepreneur</title>
+  <meta name="description" content="How to optimize your affiliate site for LLM citations — ChatGPT, Perplexity, Claude, and Google AI Overviews. Includes llms.txt setup, entity signals, structured data for AI, and writing patterns that get cited.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://alternativeentrepreneur.com/course/module-5-llm-seo/">
+  <meta property="og:title" content="Module 5: LLM SEO & GEO — Get Cited by ChatGPT, Perplexity & Google AI Overviews">
+  <meta property="og:url" content="https://alternativeentrepreneur.com/course/module-5-llm-seo/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://alternativeentrepreneur.com/images/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Module 5: LLM SEO & GEO","url":"https://alternativeentrepreneur.com/course/module-5-llm-seo/","isPartOf":{"@type":"Course","name":"The No-WordPress Affiliate Playbook","url":"https://alternativeentrepreneur.com/course/"},"learningResourceType":"Module","isAccessibleForFree":true}</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.svg">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .lesson-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:2.5rem;flex-wrap:wrap;}
+    .lesson-nav-info{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;}
+    .lesson-nav-title{font-size:.92rem;font-weight:600;color:var(--white);margin-top:.2rem;}
+    .lesson-prev-next{display:flex;gap:.75rem;flex-wrap:wrap;}
+    .module-pill{display:inline-flex;align-items:center;gap:.35rem;background:rgba(0,224,122,0.1);border:1px solid rgba(0,224,122,0.2);border-radius:999px;padding:.25em .9em;font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap;}
+    .module-pill:hover{background:rgba(0,224,122,0.18);text-decoration:none;}
+    .code-block{background:var(--bg-card2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:var(--font-mono);font-size:.83rem;color:var(--text);line-height:1.75;overflow-x:auto;}
+    .prompt-box{background:var(--bg-card2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:var(--font-mono);font-size:.85rem;color:var(--text);line-height:1.65;position:relative;}
+    .prompt-box::before{content:'Prompt';position:absolute;top:-.65rem;left:1rem;background:var(--bg-card2);padding:0 .5rem;font-size:.7rem;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-sans);}
+    .signal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0;}
+    .signal-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;}
+    .signal-card h5{margin:0 0 .3rem;font-size:.85rem;color:var(--white);}
+    .signal-card p{margin:0;font-size:.78rem;color:var(--text-muted);line-height:1.5;}
+    .llm-compare{width:100%;border-collapse:collapse;font-size:.85rem;margin:1.5rem 0;}
+    .llm-compare th{background:var(--bg-card2);color:var(--text-muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;padding:.6rem 1rem;text-align:left;}
+    .llm-compare td{padding:.65rem 1rem;border-bottom:1px solid var(--border);color:var(--text);}
+    .llm-compare tr:last-child td{border-bottom:none;}
+    .llm-compare tr:hover td{background:rgba(255,255,255,0.02);}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a>
+      <nav class="site-nav" id="site-nav">
+        <a href="/affiliate-marketing/">Affiliate Marketing</a>
+        <a href="/ai-tools/">AI Tools</a>
+        <a href="/build-with-ai/">Build With AI</a>
+        <a href="/workflows/">Workflows</a>
+        <a href="/course/" class="active">Free Course</a>
+        <a href="/about/" class="nav-cta">About</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container--prose">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/course/">Free Course</a><span class="sep">›</span>
+      <span>Module 5</span>
+    </div>
+    <div class="article-meta">
+      <span class="badge">Free Course</span>
+      <span class="badge badge--purple">Module 5 of 8</span>
+      <span class="badge badge--orange">Zero competition</span>
+      <span class="date">March 2026</span>
+    </div>
+    <h1 class="article-title">Module 5: LLM SEO &amp; GEO</h1>
+    <p class="article-desc">The new frontier: how to get your affiliate site cited by ChatGPT, Perplexity, Claude, and Google's AI Overviews. This is the area where no course teaches it and first-mover advantage is real.</p>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container--prose">
+
+    <div class="lesson-nav">
+      <div>
+        <div class="lesson-nav-info">You are here</div>
+        <div class="lesson-nav-title">Module 5: LLM SEO &amp; GEO</div>
+      </div>
+      <div class="lesson-prev-next">
+        <a href="/course/module-4-content-that-ranks/" class="module-pill">← Module 4: Content</a>
+        <a href="/course/module-6-programmatic-seo/" class="module-pill">Module 6: Programmatic →</a>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h4>In this module</h4>
+      <ol>
+        <li><a href="#llm-vs-google">LLM SEO vs traditional SEO: what's different</a></li>
+        <li><a href="#how-llms-cite">How LLMs select sources for citation</a></li>
+        <li><a href="#writing-patterns">Writing patterns that LLMs pull from</a></li>
+        <li><a href="#llmstxt">llms.txt — what it is and what to put in it</a></li>
+        <li><a href="#entity-signals">Entity signals and knowledge graph basics</a></li>
+        <li><a href="#structured-data">Structured data for AI visibility</a></li>
+        <li><a href="#aio">Google AI Overviews optimization</a></li>
+        <li><a href="#measure">How to measure LLM citation</a></li>
+      </ol>
+    </div>
+
+    <h2 id="llm-vs-google">LLM SEO vs traditional SEO: what's different</h2>
+    <p>Traditional SEO targets a search engine's document-retrieval system. Google crawls your page, indexes it, and when users search, it returns a ranked list of URLs. Your goal is to rank in that list and get clicks.</p>
+    <p>LLM SEO (also called Generative Engine Optimization, or GEO) targets a fundamentally different system. Language models don't return a list of URLs — they synthesize an answer from training data and, where available, real-time retrieval (Perplexity, Bing Copilot, ChatGPT with search enabled). The user may never visit your site at all. But they might be told by ChatGPT "according to [your site], the best option for your use case is X" — and that recommendation shapes their decision.</p>
+
+    <p>Key differences:</p>
+    <ul>
+      <li><strong>Citation vs ranking:</strong> In traditional SEO you're competing for a rank position. In LLM SEO you're trying to be cited as a source — included in the model's synthesized answer.</li>
+      <li><strong>Training data vs live retrieval:</strong> Some LLMs (ChatGPT without search, Claude without retrieval) draw on training data with a knowledge cutoff. Others (Perplexity, Bing Copilot, ChatGPT with search) pull live web results. Different optimization approaches apply to each.</li>
+      <li><strong>Verifiable claims over opinions:</strong> LLMs prefer to cite factual, specific, verifiable claims. Your opinion about which tool is best carries less weight; a comparison table with actual pricing data carries more.</li>
+    </ul>
+
+    <h2 id="how-llms-cite">How LLMs select sources for citation</h2>
+    <p>There's no public "how we cite sources" documentation from OpenAI or Anthropic, but from testing and academic research on RAG (retrieval-augmented generation) systems, several patterns emerge:</p>
+
+    <h3>For training-data-based responses:</h3>
+    <ul>
+      <li>Sites that were in the training corpus and received consistent signals of quality (links, citations from other sources, social shares) are weighted more heavily.</li>
+      <li>Content that explicitly states clear, factual claims tends to get incorporated into model "knowledge" vs. vague opinion content that doesn't anchor to anything specific.</li>
+      <li>Sites that appear consistently when a topic is discussed across many web pages get stronger entity associations inside the model.</li>
+    </ul>
+
+    <h3>For live retrieval systems (Perplexity, ChatGPT with search):</h3>
+    <ul>
+      <li>Content that directly and concisely answers the query tends to be preferred — the system is looking for the best "snippet" to cite.</li>
+      <li>Pages that load fast, have clean HTML structure, and aren't behind paywalls or cookie walls are easier to retrieve and parse.</li>
+      <li>Structured data (FAQ schema, HowTo schema) can help map your content to query patterns these systems are answering.</li>
+      <li>Perplexity in particular tends to favor pages with clear attribution (author name + credentials, updated dates), similar to Google's E-E-A-T signals.</li>
+    </ul>
+
+    <div class="callout callout--warn">
+      <div class="callout-icon">⚠️</div>
+      <div class="callout-body">
+        <strong>This is a moving target</strong>
+        <p>LLM search behavior is changing faster than any other part of SEO. The tactics in this module reflect what's working as of early 2026. Check back here — this module gets updated more frequently than any other in the course.</p>
+      </div>
+    </div>
+
+    <h2 id="writing-patterns">Writing patterns that LLMs pull from</h2>
+    <p>These content patterns show up consistently in LLM-cited content:</p>
+
+    <h3>1. Direct answer first</h3>
+    <p>Lead every section with a direct, complete answer to the implied question. Don't build up to it. LLMs doing "extractive" citation pull the passage that best answers the query — if your best answer is buried in paragraph 4, it may be missed.</p>
+    <p><strong>Good:</strong> "Asana's free plan supports up to 15 users, unlimited tasks and projects, and includes basic workflow views."<br>
+    <strong>Bad:</strong> "Let's explore what Asana offers at different pricing tiers..."</p>
+
+    <h3>2. Specific, verifiable facts over opinions</h3>
+    <p>Prices, user limits, feature names, dates, test results — these are what retrieval systems anchor to. "The best project management tool" is an assertion that requires trust. "Asana's free plan includes 15 user seats, unlimited tasks, and timeline view locked behind paid tiers" is verifiable and specific.</p>
+
+    <h3>3. FAQ sections with concise answers</h3>
+    <p>Add a FAQ section to every article with 4–8 questions that users commonly ask about the topic. Keep answers to 2–4 sentences each. These are ideal retrieval targets for conversational AI queries.</p>
+
+    <h3>4. Comparative statements</h3>
+    <p>Explicit comparison language — "X is better than Y for [specific use case] because [specific reason]" — maps well to the query patterns LLMs answer. Vague "X has pros and cons" framing gets passed over for content with clear comparative conclusions.</p>
+
+    <h3>5. Updated, dated content</h3>
+    <p>Retrieval systems prioritize freshness. Your "updated [month, year]" date in meta, in schema, and visibly on the page signals recency to both traditional search and AI retrieval systems.</p>
+
+    <h2 id="llmstxt">llms.txt — what it is and what to put in it</h2>
+    <p><code>llms.txt</code> is an emerging convention (not yet a formal standard, but adopted by a growing number of frameworks and AI systems) that helps LLMs understand and index a website more effectively. It's analogous to <code>robots.txt</code> but for AI crawlers — it provides a structured summary of your site's content and tells AI systems which pages are most relevant to ingest.</p>
+
+    <p>The format was proposed in 2024 and is gaining adoption. Perplexity and some AI agents that crawl the web have begun supporting it. Create <code>llms.txt</code> at your root domain: <code>https://yourdomain.com/llms.txt</code></p>
+
+    <p>Structure:</p>
+    <div class="code-block"># Site Name
+
+> One-paragraph description of what this site covers, who it's for, and what makes it authoritative on this topic.
+
+## Core Topics
+- [Topic 1]: /url-to-hub-page/
+- [Topic 2]: /url-to-hub-page/
+- [Topic 3]: /url-to-hub-page/
+
+## Most Cited Pages
+- [Page title]: /url/ — one-sentence description
+- [Page title]: /url/ — one-sentence description
+
+## About the Author
+Name, credentials, relevant experience. Link to /about/.
+
+## Data &amp; Methodology
+If you publish original research, test results, or income reports, describe methodology here.
+
+## Updates
+This site is updated [frequency]. Content reflects [date range of coverage].</div>
+
+    <p>Example for this site:</p>
+    <div class="code-block"># Alternative Entrepreneur
+
+> A build-in-public affiliate marketing site documenting the process of building a modern affiliate site without WordPress. Covers AI-first content workflows, LLM SEO, programmatic SEO with static HTML and Next.js, and real monthly income reports from the site itself.
+
+## Core Topics
+- Affiliate Marketing: /affiliate-marketing/
+- AI Tools for Content Creation: /ai-tools/
+- Build With AI: /build-with-ai/
+- Workflows &amp; Automation: /workflows/
+
+## Most Cited Pages
+- Best AI Writing Tools for Bloggers: /ai-tools/best-ai-writing-tools-for-bloggers/
+- How to Build an Affiliate Site Without WordPress: /build-with-ai/how-to-build-a-niche-affiliate-website-2026/
+- Affiliate Marketing for Beginners: /affiliate-marketing/affiliate-marketing-for-beginners/
+
+## About
+Solo-operator affiliate site. Author has direct experience building and monetizing static-HTML affiliate sites using AI tools since 2024. Monthly income reports available at /income-reports/.
+
+## Updates
+Updated monthly. Income reports published first of each month.</div>
+
+    <h2 id="entity-signals">Entity signals and knowledge graph basics</h2>
+    <p>Google's Knowledge Graph and LLMs both build "entity associations" — connections between named things (your site, you as an author, the topics you cover). The goal is to have your site's name and topic area associated strongly enough in these models that when someone asks about your topic, your site comes up as a source.</p>
+
+    <p>Practical ways to strengthen entity signals:</p>
+    <div class="signal-grid">
+      <div class="signal-card">
+        <h5>Consistent brand mentions</h5>
+        <p>Get your site mentioned on other sites — even without a link, brand mentions ("as reported by [Your Site Name]") create entity associations in the knowledge graph.</p>
+      </div>
+      <div class="signal-card">
+        <h5>Social presence</h5>
+        <p>A LinkedIn profile, X/Twitter account, or Reddit presence where you discuss your niche. The consistency of your name + topic across platforms reinforces entity associations.</p>
+      </div>
+      <div class="signal-card">
+        <h5>Author schema</h5>
+        <p>Use <code>Person</code> schema on your About page with <code>sameAs</code> links to your social profiles. This explicitly connects your identity across platforms for knowledge graph parsers.</p>
+      </div>
+      <div class="signal-card">
+        <h5>Wikipedia / Wikidata</h5>
+        <p>Not realistic for most new sites, but a long-term goal. A Wikipedia page or Wikidata entry about your site significantly boosts entity recognition by LLMs trained on Wikipedia-derived data.</p>
+      </div>
+    </div>
+
+    <h2 id="structured-data">Structured data for AI visibility</h2>
+    <p>Beyond the page-level schemas from Module 4, add these site-level schemas to strengthen AI visibility:</p>
+
+    <h3>WebSite schema with SearchAction</h3>
+    <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Your Site Name",
+  "url": "https://yourdomain.com",
+  "description": "One-sentence description of the site.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://yourdomain.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+&lt;/script&gt;</div>
+
+    <h3>Person schema on About page</h3>
+    <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Your Name",
+  "url": "https://yourdomain.com/about/",
+  "sameAs": [
+    "https://twitter.com/yourhandle",
+    "https://linkedin.com/in/yourprofile"
+  ],
+  "jobTitle": "Affiliate Marketer",
+  "knowsAbout": ["affiliate marketing", "AI tools", "programmatic SEO"]
+}
+&lt;/script&gt;</div>
+
+    <h3>FAQPage schema</h3>
+    <p>Add this to any page with a FAQ section. It's one of the most reliably cited schema types by AI Overviews and retrieval-augmented systems:</p>
+    <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best project management software for small teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For small teams under 15 people, Asana's free tier covers most needs..."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+
+    <h2 id="aio">Google AI Overviews optimization</h2>
+    <p>Google AI Overviews (formerly Search Generative Experience) pulls from a mix of sources to generate a synthesized answer at the top of search results. Not all queries trigger AI Overviews — informational queries are more likely to trigger them than navigational or transactional ones.</p>
+
+    <p>What Google tends to pull for AIO sources:</p>
+    <ul>
+      <li>Pages that already rank in the top 10 for the query — AIO is not a bypass for traditional SEO signals, it layers on top.</li>
+      <li>Content with clear structure: headers, bullet points, short definitive statements.</li>
+      <li>E-E-A-T signals similar to traditional ranking — author attribution, accurate dates, reliable domain.</li>
+      <li>Direct answer to the specific query in the first 100 words of the relevant section.</li>
+    </ul>
+
+    <p>To optimize for AIO: structure every article so each H2 section starts with a direct, concise answer to the question implied by that heading. Then expand. This makes your content "extractable" for the synthesis layer.</p>
+
+    <h2 id="measure">How to measure LLM citation</h2>
+    <p>Unlike traditional SEO where Google Search Console gives you impression and click data, there's no official "LLM citation console" yet. Here's how to measure manually:</p>
+
+    <table class="llm-compare">
+      <thead><tr><th>Platform</th><th>How to test citation</th><th>Frequency</th></tr></thead>
+      <tbody>
+        <tr><td>ChatGPT (with search)</td><td>Ask "what are the best [your niche] tools?" and variations. Note if your site is cited.</td><td>Monthly</td></tr>
+        <tr><td>Perplexity</td><td>Query your target keywords. Check Sources panel for your domain.</td><td>Monthly</td></tr>
+        <tr><td>Google AIO</td><td>Search your target keywords in incognito. Note AIO presence and sources.</td><td>Weekly</td></tr>
+        <tr><td>Bing Copilot</td><td>Ask your target queries. Copilot shows numbered citations — check for your domain.</td><td>Monthly</td></tr>
+        <tr><td>Claude (with search)</td><td>Use Claude.ai with web access enabled. Test commercial queries in your niche.</td><td>Monthly</td></tr>
+      </tbody>
+    </table>
+
+    <p>Track your citations in a simple spreadsheet: date, platform, query, cited/not cited. Over time this tells you whether your LLM SEO efforts are moving the needle.</p>
+
+    <h3>Module 5 action steps</h3>
+    <ol>
+      <li>Audit your existing content for direct-answer-first structure — rewrite introductions that bury the lead</li>
+      <li>Add FAQ sections (4–8 questions with concise answers) to your top 5 pages</li>
+      <li>Create <code>llms.txt</code> in your site root</li>
+      <li>Add <code>FAQPage</code> schema to all pages with FAQ sections</li>
+      <li>Add <code>Person</code> schema to your About page with <code>sameAs</code> links</li>
+      <li>Run your top 5 target keywords through ChatGPT, Perplexity, and Google to establish a citation baseline</li>
+    </ol>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem;">
+      <a href="/course/module-4-content-that-ranks/" class="btn btn--ghost">← Module 4: Content</a>
+      <a href="/course/module-6-programmatic-seo/" class="btn btn--primary">Module 6: Programmatic SEO →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container--prose">
+  <div class="related">
+    <h3>Related Modules</h3>
+    <div class="related-grid">
+      <div class="related-card"><div class="cat">Module 4</div><h4><a href="/course/module-4-content-that-ranks/">Content That Ranks</a></h4></div>
+      <div class="related-card"><div class="cat">Module 6</div><h4><a href="/course/module-6-programmatic-seo/">Programmatic SEO</a></h4></div>
+      <div class="related-card"><div class="cat">AI Tools</div><h4><a href="/ai-tools/ai-tools-for-seo-2026/">AI Tools for SEO 2026</a></h4></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="affiliate-disclaimer"><strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. If you click through and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools and services I personally use or have thoroughly tested.</div>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="site-logo">Alternative<span class="logo-dot">Entrepreneur</span></a><p>Real workflows, honest AI tool reviews, and affiliate marketing strategies for building income online the alternative way.</p></div>
+      <div class="footer-col"><h5>Free Course</h5><ul><li><a href="/course/">Overview</a></li><li><a href="/course/module-1-stack-setup/">Module 1: Stack</a></li><li><a href="/course/module-2-niche-research/">Module 2: Niches</a></li><li><a href="/course/module-5-llm-seo/">Module 5: LLM SEO</a></li></ul></div>
+      <div class="footer-col"><h5>Tools</h5><ul><li><a href="/tools/ai-prompt-templates/">AI Prompt Templates</a></li><li><a href="/tools/affiliate-income-calculator/">Income Calculator</a></li><li><a href="/tools/affiliate-program-finder/">Program Finder</a></li><li><a href="/tools/content-brief-generator/">Brief Generator</a></li></ul></div>
+      <div class="footer-col"><h5>Build &amp; Learn</h5><ul><li><a href="/build-with-ai/">Build With AI</a></li><li><a href="/workflows/">Workflows</a></li><li><a href="/ai-tools/">AI Tools</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&#x00A9; 2026 Alternative Entrepreneur. All rights reserved.</span><span class="footer-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a><a href="/about/">About</a><a href="/contact/">Contact</a></span></div>
+  </div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',function(){const n=document.getElementById('site-nav');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);});</script>
+</body>
+</html>
