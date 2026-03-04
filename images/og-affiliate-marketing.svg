@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif">
+  <defs>
+    <pattern id="g" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0L0 0 0 50" fill="none" stroke="#1a1e2b" stroke-width="0.7"/>
+    </pattern>
+    <radialGradient id="gl1" cx="35%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#00e07a" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#00e07a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gl2" cx="90%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="#00b860" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#00b860" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e07a" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00e07a"/>
+      <stop offset="70%" stop-color="#00b860"/>
+      <stop offset="100%" stop-color="#00b860" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d0f14"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#gl1)"/>
+  <rect width="1200" height="630" fill="url(#gl2)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#topbar)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="#00e07a" opacity="0.45"/>
+  <rect x="0" y="0" width="4" height="630" fill="#00e07a" opacity="0.55"/>
+
+  <!-- BRAND: logo mark + name -->
+  <g transform="translate(52, 46)">
+    <rect width="54" height="54" rx="11" fill="#141720" stroke="#232840" stroke-width="1.2"/>
+    <path d="M13 41 L27 13 L41 41" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="20" y1="33" x2="34" y2="33" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="40.5" cy="40.5" r="5.5" fill="#00e07a"/>
+  </g>
+  <text x="122" y="68" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="-0.3">Alternative<tspan fill="#00e07a">Entrepreneur</tspan></text>
+  <text x="122" y="90" fill="#5c6080" font-size="14">alternativeentrepreneur.com</text>
+  <!-- Vertical divider content/visual -->
+  <line x1="806" y1="128" x2="806" y2="522" stroke="#232840" stroke-width="1"/>
+
+  <!-- Right: ascending bar chart panel -->
+  <rect x="834" y="130" width="318" height="400" rx="16" fill="#141720" stroke="#232840" stroke-width="1.2"/>
+  <text x="993" y="168" fill="#8b90a7" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.10em">AFFILIATE COMMISSION SCALE</text>
+  <!-- Grid lines -->
+  <line x1="858" y1="185" x2="1128" y2="185" stroke="#1a1e2b" stroke-width="1"/>
+  <line x1="858" y1="225" x2="1128" y2="225" stroke="#1a1e2b" stroke-width="1"/>
+  <line x1="858" y1="265" x2="1128" y2="265" stroke="#1a1e2b" stroke-width="1"/>
+  <line x1="858" y1="305" x2="1128" y2="305" stroke="#1a1e2b" stroke-width="1"/>
+  <line x1="858" y1="345" x2="1128" y2="345" stroke="#1a1e2b" stroke-width="1"/>
+  <!-- Bars -->
+  <rect x="872" y="325" width="44" height="60" rx="5" fill="#00e07a" opacity="0.35"/>
+  <rect x="936" y="275" width="44" height="110" rx="5" fill="#00e07a" opacity="0.55"/>
+  <rect x="1000" y="215" width="44" height="170" rx="5" fill="#00e07a" opacity="0.75"/>
+  <rect x="1064" y="155" width="44" height="230" rx="5" fill="#00e07a"/>
+  <!-- Bar value labels -->
+  <text x="894" y="318" fill="#8b90a7" font-size="12" text-anchor="middle">$15</text>
+  <text x="958" y="268" fill="#8b90a7" font-size="12" text-anchor="middle">$50</text>
+  <text x="1022" y="208" fill="#8b90a7" font-size="12" text-anchor="middle">$100</text>
+  <text x="1086" y="148" fill="#00e07a" font-size="13" font-weight="700" text-anchor="middle">$200+</text>
+  <!-- Bar category labels -->
+  <text x="894" y="402" fill="#5c6080" font-size="11" text-anchor="middle">Low</text>
+  <text x="958" y="402" fill="#5c6080" font-size="11" text-anchor="middle">Mid</text>
+  <text x="1022" y="402" fill="#5c6080" font-size="11" text-anchor="middle">High</text>
+  <text x="1086" y="402" fill="#00e07a" font-size="11" font-weight="700" text-anchor="middle">Elite</text>
+  <!-- Trend line -->
+  <path d="M894 340 L958 290 L1022 230 L1086 170" stroke="#00e07a" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity="0.7"/>
+  <polygon points="1086,152 1078,172 1094,172" fill="#00e07a"/>
+  <!-- Bottom pill in chart -->
+  <rect x="868" y="418" width="266" height="30" rx="8" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.2)" stroke-width="1"/>
+  <text x="1001" y="437" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.05em">HIGH-TICKET PROGRAMS COMPARED</text>
+
+  <!-- EYEBROW BADGE -->
+  <g transform="translate(52, 138)">
+    <rect width="250" height="32" rx="16" fill="rgba(0,224,122,0.09)" stroke="rgba(0,224,122,0.28)" stroke-width="1"/>
+    <circle cx="20" cy="16" r="5" fill="#00e07a"/>
+    <text x="36" y="21.5" fill="#00e07a" font-size="12" font-weight="700" letter-spacing="0.12em">AFFILIATE MARKETING · 2026</text>
+  </g>
+
+  <!-- MAIN HEADLINE -->
+  <text x="52" y="265" fill="#ffffff" font-size="88" font-weight="900" letter-spacing="-3.5">Earn Without</text>
+  <text x="52" y="362" fill="#00e07a" font-size="88" font-weight="900" letter-spacing="-3.5">an Audience</text>
+
+  <!-- TAGLINE -->
+  <text x="52" y="418" fill="#8b90a7" font-size="21" letter-spacing="-0.2">High-ticket programs · AI research tools · Proven strategies</text>
+
+  <line x1="52" y1="446" x2="756" y2="446" stroke="#1a1e2b" stroke-width="1.2"/>
+
+  <!-- PILLS -->
+  <g transform="translate(52, 464)">
+    <rect width="172" height="34" rx="17" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.22)" stroke-width="1"/>
+    <text x="86" y="22.5" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">NO AUDIENCE NEEDED</text>
+  </g>
+  <g transform="translate(238, 464)">
+    <rect width="140" height="34" rx="17" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.22)" stroke-width="1"/>
+    <text x="70" y="22.5" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">HIGH-TICKET</text>
+  </g>
+  <g transform="translate(392, 464)">
+    <rect width="140" height="34" rx="17" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.22)" stroke-width="1"/>
+    <text x="70" y="22.5" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">AI-POWERED</text>
+  </g>
+  <g transform="translate(546, 464)">
+    <rect width="136" height="34" rx="17" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.22)" stroke-width="1"/>
+    <text x="68" y="22.5" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">FOR BEGINNERS</text>
+  </g>
+</svg>

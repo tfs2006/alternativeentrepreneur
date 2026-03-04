@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif">
+  <defs>
+    <pattern id="g" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0L0 0 0 50" fill="none" stroke="#1a1e2b" stroke-width="0.7"/>
+    </pattern>
+    <radialGradient id="gl1" cx="35%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#5ba0ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#5ba0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gl2" cx="88%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5ba0ff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#5ba0ff"/>
+      <stop offset="70%" stop-color="#7c5cfc"/>
+      <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d0f14"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#gl1)"/>
+  <rect width="1200" height="630" fill="url(#gl2)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#topbar)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="#5ba0ff" opacity="0.55"/>
+  <rect x="0" y="0" width="4" height="630" fill="#5ba0ff" opacity="0.55"/>
+
+  <!-- BRAND: logo mark + name -->
+  <g transform="translate(52, 46)">
+    <rect width="54" height="54" rx="11" fill="#141720" stroke="#232840" stroke-width="1.2"/>
+    <path d="M13 41 L27 13 L41 41" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="20" y1="33" x2="34" y2="33" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="40.5" cy="40.5" r="5.5" fill="#00e07a"/>
+  </g>
+  <text x="122" y="68" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="-0.3">Alternative<tspan fill="#00e07a">Entrepreneur</tspan></text>
+  <text x="122" y="90" fill="#5c6080" font-size="14">alternativeentrepreneur.com</text>
+  <!-- Vertical divider content/visual -->
+  <line x1="806" y1="128" x2="806" y2="522" stroke="#232840" stroke-width="1"/>
+
+  <!-- Right: terminal / code window -->
+  <rect x="828" y="125" width="324" height="390" rx="14" fill="#0a0c10" stroke="#232840" stroke-width="1.2"/>
+  <!-- Title bar -->
+  <rect x="828" y="125" width="324" height="38" rx="14" fill="#141720"/>
+  <rect x="828" y="148" width="324" height="15" fill="#141720"/>
+  <!-- Traffic light dots -->
+  <circle cx="850" cy="144" r="6.5" fill="#ff5f57"/>
+  <circle cx="870" cy="144" r="6.5" fill="#ffbd2e"/>
+  <circle cx="890" cy="144" r="6.5" fill="#28c840"/>
+  <text x="994" y="149" fill="#5c6080" font-size="12" text-anchor="middle">~/affiliate-site</text>
+  <!-- Code lines -->
+  <text x="848" y="188" fill="#5c6080" font-size="13" font-family="'Courier New',Courier,monospace">$</text>
+  <text x="862" y="188" fill="#5ba0ff" font-size="13" font-family="'Courier New',Courier,monospace">npx create-next-app</text>
+  <text x="848" y="212" fill="#5c6080" font-size="13" font-family="'Courier New',Courier,monospace">$</text>
+  <text x="862" y="212" fill="#00e07a" font-size="13" font-family="'Courier New',Courier,monospace">ai-content generate</text>
+  <text x="862" y="228" fill="#8b90a7" font-size="11" font-family="'Courier New',Courier,monospace">  ✓ 50 pages created in 4.2s</text>
+  <text x="848" y="252" fill="#5c6080" font-size="13" font-family="'Courier New',Courier,monospace">$</text>
+  <text x="862" y="252" fill="#7c5cfc" font-size="13" font-family="'Courier New',Courier,monospace">vercel deploy --prod</text>
+  <text x="862" y="268" fill="#8b90a7" font-size="11" font-family="'Courier New',Courier,monospace">  ✓ Live in 34s</text>
+  <text x="848" y="292" fill="#5c6080" font-size="13" font-family="'Courier New',Courier,monospace">$</text>
+  <text x="862" y="292" fill="#ff9d4a" font-size="13" font-family="'Courier New',Courier,monospace">seo rank-track --site</text>
+  <text x="862" y="308" fill="#8b90a7" font-size="11" font-family="'Courier New',Courier,monospace">  ✓ 12 keywords page 1</text>
+  <!-- Cursor blink -->
+  <rect x="848" y="318" width="10" height="16" rx="2" fill="#00e07a" opacity="0.85"/>
+  <!-- Separator -->
+  <line x1="828" y1="352" x2="1152" y2="352" stroke="#1a1e2b" stroke-width="1"/>
+  <!-- Bottom stat row -->
+  <text x="870" y="376" fill="#8b90a7" font-size="12">Stack:</text>
+  <text x="916" y="376" fill="#5ba0ff" font-size="12" font-weight="700">Next.js</text>
+  <text x="968" y="376" fill="#8b90a7" font-size="12">·</text>
+  <text x="983" y="376" fill="#7c5cfc" font-size="12" font-weight="700">Vercel</text>
+  <text x="1030" y="376" fill="#8b90a7" font-size="12">·</text>
+  <text x="1042" y="376" fill="#00e07a" font-size="12" font-weight="700">AI SEO</text>
+  <!-- Metric row -->
+  <text x="848" y="404" fill="#ffffff" font-size="19" font-weight="900">$0 hosting</text>
+  <text x="986" y="404" fill="#8b90a7" font-size="14">· built in a weekend</text>
+  <!-- Green status pill -->
+  <rect x="848" y="420" width="264" height="30" rx="8" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.2)" stroke-width="1"/>
+  <circle cx="868" cy="435" r="5" fill="#00e07a"/>
+  <text x="882" y="439" fill="#00e07a" font-size="12" font-weight="700" letter-spacing="0.05em">DEPLOYED · INDEXED · EARNING</text>
+
+  <!-- EYEBROW BADGE -->
+  <g transform="translate(52, 138)">
+    <rect width="212" height="32" rx="16" fill="rgba(91,160,255,0.10)" stroke="rgba(91,160,255,0.30)" stroke-width="1"/>
+    <circle cx="20" cy="16" r="5" fill="#5ba0ff"/>
+    <text x="36" y="21.5" fill="#5ba0ff" font-size="12" font-weight="700" letter-spacing="0.12em">BUILD WITH AI · 2026</text>
+  </g>
+
+  <!-- MAIN HEADLINE -->
+  <text x="52" y="265" fill="#ffffff" font-size="82" font-weight="900" letter-spacing="-3">Build Affiliate Sites</text>
+  <text x="52" y="358" fill="#5ba0ff" font-size="82" font-weight="900" letter-spacing="-3">with AI — Fast</text>
+
+  <!-- TAGLINE -->
+  <text x="52" y="414" fill="#8b90a7" font-size="21" letter-spacing="-0.2">Next.js · Vercel · AI content · SEO strategy that converts</text>
+
+  <line x1="52" y1="442" x2="756" y2="442" stroke="#1a1e2b" stroke-width="1.2"/>
+
+  <!-- PILLS -->
+  <g transform="translate(52, 460)">
+    <rect width="106" height="34" rx="17" fill="rgba(91,160,255,0.08)" stroke="rgba(91,160,255,0.22)" stroke-width="1"/>
+    <text x="53" y="22.5" fill="#5ba0ff" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">NEXT.JS</text>
+  </g>
+  <g transform="translate(172, 460)">
+    <rect width="104" height="34" rx="17" fill="rgba(91,160,255,0.08)" stroke="rgba(91,160,255,0.22)" stroke-width="1"/>
+    <text x="52" y="22.5" fill="#5ba0ff" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">VERCEL</text>
+  </g>
+  <g transform="translate(290, 460)">
+    <rect width="118" height="34" rx="17" fill="rgba(0,224,122,0.08)" stroke="rgba(0,224,122,0.22)" stroke-width="1"/>
+    <text x="59" y="22.5" fill="#00e07a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">AI CONTENT</text>
+  </g>
+  <g transform="translate(422, 460)">
+    <rect width="148" height="34" rx="17" fill="rgba(124,92,252,0.08)" stroke="rgba(124,92,252,0.22)" stroke-width="1"/>
+    <text x="74" y="22.5" fill="#7c5cfc" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">PROG SEO</text>
+  </g>
+  <g transform="translate(584, 460)">
+    <rect width="116" height="34" rx="17" fill="rgba(255,157,74,0.08)" stroke="rgba(255,157,74,0.22)" stroke-width="1"/>
+    <text x="58" y="22.5" fill="#ff9d4a" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.07em">FREE GUIDE</text>
+  </g>
+</svg>
