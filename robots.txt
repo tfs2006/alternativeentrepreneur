@@ -1,5 +1,5 @@
-# Robots.txt for Alternative Entrepreneur - Best AI Productivity Tools
-# https://tfs2006.github.io/alternativeentrepreneur/
+# Robots.txt for Alternative Entrepreneur
+# https://alternativeentrepreneur.com/
 
 User-agent: *
 Allow: /
@@ -32,4 +32,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://tfs2006.github.io/alternativeentrepreneur/sitemap.xml
+Sitemap: https://alternativeentrepreneur.com/sitemap.xml
