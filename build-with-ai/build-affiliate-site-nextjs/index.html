@@ -1,4 +1,4 @@
-<!doctype html>
+ï»¿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -11,8 +11,8 @@
     gtag('config', 'G-MCCWTH1T0M');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How I Built an Affiliate Site with Next.js — Full Build Log 2026 | Alternative Entrepreneur</title>
-  <meta name="description" content="A complete build log of how I built an affiliate site with Next.js — from initial setup and content pipeline to deployment on Vercel and SEO configuration. Everything I actually did.">
+  <title>How I Built an Affiliate Site with Next.js â€” Full Build Log 2026 | Alternative Entrepreneur</title>
+  <meta name="description" content="A complete build log of how I built an affiliate site with Next.js â€” from initial setup and content pipeline to deployment on Vercel and SEO configuration. Everything I actually did.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://alternativeentrepreneur.com/build-with-ai/build-affiliate-site-nextjs/">
   <meta property="og:title" content="How I Built an Affiliate Site with Next.js (Full Build Log 2026)">
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "How I Built an Affiliate Site with Next.js — Full Build Log 2026",
-    "description": "A complete technical build log of an affiliate site built with Next.js — setup, content pipeline, SEO, deployment, and monetization.",
+    "headline": "How I Built an Affiliate Site with Next.js â€” Full Build Log 2026",
+    "description": "A complete technical build log of an affiliate site built with Next.js â€” setup, content pipeline, SEO, deployment, and monetization.",
     "url": "https://alternativeentrepreneur.com/build-with-ai/build-affiliate-site-nextjs/",
     "datePublished": "2026-03-01",
     "dateModified": "2026-03-01",
@@ -69,8 +69,8 @@
 <div class="article-header">
   <div class="container--prose">
     <div class="breadcrumb">
-      <a href="/">Home</a><span class="sep">›</span>
-      <a href="/build-with-ai/">Build With AI</a><span class="sep">›</span>
+      <a href="/">Home</a><span class="sep">â€”</span>
+      <a href="/build-with-ai/">Build With AI</a><span class="sep">â€”</span>
       <span>Build Affiliate Site with Next.js</span>
     </div>
     <div class="article-meta">
@@ -79,7 +79,7 @@
       <span class="date">March 1, 2026</span>
     </div>
     <h1 class="article-title">How I Built an Affiliate Site with Next.js (Full Build Log)</h1>
-    <p class="article-desc">Most affiliate marketing content is built on WordPress. I went with Next.js — and it gave me a technical advantage almost nobody in affiliate marketing has. Here's the complete build log of how I built a production affiliate site with Next.js, from zero to deployed and ranking.</p>
+    <p class="article-desc">Most affiliate marketing content is built on WordPress. I went with Next.js â€” and it gave me a technical advantage almost nobody in affiliate marketing has. Here's the complete build log of how I built a production affiliate site with Next.js, from zero to deployed and ranking.</p>
   </div>
 </div>
 
@@ -101,46 +101,46 @@
 
     <div class="callout callout--tip">
       <span class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
-      <div class="callout-body"><strong>Technical Authority Advantage</strong><p>There are almost zero affiliate marketers building with Next.js. This means if you cover the topic, you own virtually all of the search traffic for it — and it positions you as a technical authority that earns immediate trust from a developer-adjacent audience.</p></div>
+      <div class="callout-body"><strong>Technical Authority Advantage</strong><p>There are almost zero affiliate marketers building with Next.js. This means if you cover the topic, you own virtually all of the search traffic for it â€” and it positions you as a technical authority that earns immediate trust from a developer-adjacent audience.</p></div>
     </div>
 
     <h2 id="why-nextjs">Why I Chose Next.js for an Affiliate Site</h2>
-    <p>When most people think affiliate sites, they think WordPress + a page builder. That's fine — WordPress works. But I had specific requirements:</p>
+    <p>When most people think affiliate sites, they think WordPress + a page builder. That's fine â€” WordPress works. But I had specific requirements:</p>
     <ul>
       <li><strong>Performance:</strong> Core Web Vitals are a real ranking factor and I wanted near-perfect scores</li>
       <li><strong>Programmatic scale:</strong> I wanted to be able to generate hundreds of pages from structured data without a bloated CMS</li>
       <li><strong>Developer control:</strong> I wanted to write real code, not fight with plugins</li>
       <li><strong>Static generation:</strong> The site needed to be fast everywhere, not reliant on server response time</li>
     </ul>
-    <p>Next.js with Static Site Generation (SSG) checked all of these boxes. I could build pages from JSON data files, deploy to Vercel for free on the hobby tier, and get PageSpeed scores in the 95–100 range.</p>
+    <p>Next.js with Static Site Generation (SSG) checked all of these boxes. I could build pages from JSON data files, deploy to Vercel for free on the hobby tier, and get PageSpeed scores in the 95â€”100 range.</p>
 
     <h2 id="setup">Project Setup and Structure</h2>
     <p>Here's the folder structure I use for affiliate sites built with Next.js:</p>
 
     <pre><code>my-affiliate-site/
 +-- app/
-¦   +-- layout.tsx          # Site-wide layout, header, footer
-¦   +-- page.tsx            # Homepage
-¦   +-- blog/
-¦   ¦   +-- page.tsx        # Blog index
-¦   ¦   +-- [slug]/
-¦   ¦       +-- page.tsx    # Individual post pages
-¦   +-- [category]/
-¦       +-- page.tsx        # Category hub page
-¦       +-- [post]/
-¦           +-- page.tsx    # Article pages
+â€”   +-- layout.tsx          # Site-wide layout, header, footer
+â€”   +-- page.tsx            # Homepage
+â€”   +-- blog/
+â€”   â€”   +-- page.tsx        # Blog index
+â€”   â€”   +-- [slug]/
+â€”   â€”       +-- page.tsx    # Individual post pages
+â€”   +-- [category]/
+â€”       +-- page.tsx        # Category hub page
+â€”       +-- [post]/
+â€”           +-- page.tsx    # Article pages
 +-- content/
-¦   +-- posts/              # MDX files — one per article
+â€”   +-- posts/              # MDX files â€” one per article
 +-- data/
-¦   +-- products.json       # Affiliate product database
+â€”   +-- products.json       # Affiliate product database
 +-- components/
-¦   +-- ToolCard.tsx        # Affiliate product card
-¦   +-- TOC.tsx             # Table of contents
-¦   +-- RelatedPosts.tsx    # Related posts component
+â€”   +-- ToolCard.tsx        # Affiliate product card
+â€”   +-- TOC.tsx             # Table of contents
+â€”   +-- RelatedPosts.tsx    # Related posts component
 +-- public/</code></pre>
 
     <h3>Content Management: MDX Files</h3>
-    <p>I author all content in <strong>MDX</strong> — Markdown with JSX components. This means I can write articles in clean Markdown but drop in custom components like <code>&lt;ToolCard&gt;</code> for affiliate product cards anywhere in the content. It's a much cleaner separation of content and code than WordPress shortcodes or Gutenberg blocks.</p>
+    <p>I author all content in <strong>MDX</strong> â€” Markdown with JSX components. This means I can write articles in clean Markdown but drop in custom components like <code>&lt;ToolCard&gt;</code> for affiliate product cards anywhere in the content. It's a much cleaner separation of content and code than WordPress shortcodes or Gutenberg blocks.</p>
 
     <h2 id="content-pipeline">AI-Assisted Content Pipeline</h2>
     <p>Here's the exact AI content pipeline I run with this Next.js setup:</p>
@@ -149,7 +149,7 @@
       <li>I clean up and rewrite the draft in MDX format, adding my own examples and voice</li>
       <li>I add <code>&lt;ToolCard&gt;</code> components at natural recommendation points</li>
       <li>I run the MDX file through a lint check to catch broken links and missing frontmatter</li>
-      <li>I commit and push — Vercel auto-deploys within 30 seconds</li>
+      <li>I commit and push â€” Vercel auto-deploys within 30 seconds</li>
     </ol>
     <p>The frontmatter for each post looks like this:</p>
     <pre><code>---
@@ -176,10 +176,10 @@ keywords: ["affiliate marketing workflow", "affiliate process"]
     }
   };
 }</code></pre>
-    <p>I also generate a <code>sitemap.ts</code> file that automatically includes every post and category page — this updates every time I deploy.</p>
+    <p>I also generate a <code>sitemap.ts</code> file that automatically includes every post and category page â€” this updates every time I deploy.</p>
 
     <h2 id="deployment">Deployment on Vercel</h2>
-    <p>I deploy on Vercel. The configuration is minimal — Vercel detects Next.js automatically and configures everything. My setup:</p>
+    <p>I deploy on Vercel. The configuration is minimal â€” Vercel detects Next.js automatically and configures everything. My setup:</p>
     <ul>
       <li>Hobby tier (free) for sites under ~100k monthly visits</li>
       <li>Custom domain connected via DNS A record</li>
@@ -200,13 +200,13 @@ keywords: ["affiliate marketing workflow", "affiliate process"]
 }</code></pre>
 
     <h2 id="results">Early Results</h2>
-    <p>Within 60 days of launch, the site was ranking on page 1 for several Very Low KD keywords. The technical performance scores helped — Google Search Console showed consistently excellent Core Web Vitals scores from day one.</p>
+    <p>Within 60 days of launch, the site was ranking on page 1 for several Very Low KD keywords. The technical performance scores helped â€” Google Search Console showed consistently excellent Core Web Vitals scores from day one.</p>
     <p>The biggest advantage I found is the <strong>crawlability</strong>. Static HTML pages with clean semantic markup and automatic sitemaps get indexed faster than WordPress sites in my testing. This matters a lot in the early days when every indexed page is a potential traffic source.</p>
 
     <div class="tool-card">
       <div class="tool-card-info">
-        <h4>Vercel — Free Hosting for Next.js Affiliate Sites</h4>
-        <p>Made by the creators of Next.js. The free tier is genuinely excellent for affiliate sites — fast global CDN, automatic SSL, and instant deploys from GitHub.</p>
+        <h4>Vercel â€” Free Hosting for Next.js Affiliate Sites</h4>
+        <p>Made by the creators of Next.js. The free tier is genuinely excellent for affiliate sites â€” fast global CDN, automatic SSL, and instant deploys from GitHub.</p>
       </div>
       <div class="tool-card-cta">
         <a href="https://vercel.com/" class="btn btn--outline" rel="nofollow sponsored noopener" target="_blank">Try Vercel Free ?</a>
