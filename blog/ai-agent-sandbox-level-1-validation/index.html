@@ -168,8 +168,12 @@
           <text x="335" y="255" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">"No" cancels safely</text>
 
           <!-- Arrow: Approval to Sandbox -->
-          <line x1="413" y1="192" x2="479" y2="192" stroke="#00e07a" stroke-width="1.5" marker-end="url(#lv1-mgm)"/>
-          <text x="446" y="185" fill="#00e07a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle" font-weight="600">executes</text>
+            <line x1="413" y1="192" x2="479" y2="192" stroke="#00e07a" stroke-width="1.5" marker-end="url(#lv1-mgm)"/>
+            <circle id="arrow-dot" r="5" fill="#00e07a" opacity="0.7">
+              <animate attributeName="cx" values="413;479" dur="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="192;192" dur="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <text x="446" y="185" fill="#00e07a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle" font-weight="600">executes</text>
 
           <!-- ══ SANDBOX PANEL ══ -->
           <rect x="484" y="56" width="262" height="328" rx="9" fill="url(#lv1-sb)" stroke="#00e07a" stroke-width="1.5" stroke-opacity="0.65"/>
