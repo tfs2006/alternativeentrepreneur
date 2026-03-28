@@ -82,6 +82,154 @@
   <div class="article-body">
     <div class="container container--prose">
 
+      <figure style="margin:0 0 2.5rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="100%" style="max-width:760px;display:block;margin:0 auto;border-radius:12px;" role="img" aria-label="Diagram: AI agent proposes a shell command, an explicit approval gate requires yes or no, and execution is locked inside the Level 1 sandbox boundary">
+          <defs>
+            <linearGradient id="lv1-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0c0f1a"/><stop offset="100%" stop-color="#111520"/>
+            </linearGradient>
+            <linearGradient id="lv1-ag" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.13"/><stop offset="100%" stop-color="#7c5cfc" stop-opacity="0.03"/>
+            </linearGradient>
+            <linearGradient id="lv1-ap" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.13"/><stop offset="100%" stop-color="#f59e0b" stop-opacity="0.03"/>
+            </linearGradient>
+            <linearGradient id="lv1-sb" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00e07a" stop-opacity="0.09"/><stop offset="100%" stop-color="#00e07a" stop-opacity="0.02"/>
+            </linearGradient>
+            <filter id="lv1-gp" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="lv1-gg" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <marker id="lv1-mam" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M1,1 L1,7 L7,4 Z" fill="#f59e0b"/>
+            </marker>
+            <marker id="lv1-mgm" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M1,1 L1,7 L7,4 Z" fill="#00e07a"/>
+            </marker>
+          </defs>
+          <!-- Background -->
+          <rect width="760" height="400" rx="12" fill="url(#lv1-bg)"/>
+          <!-- System boundary -->
+          <rect x="14" y="42" width="732" height="348" rx="9" fill="none" stroke="#1e2535" stroke-width="1.5" stroke-dasharray="8,4"/>
+          <rect x="14" y="35" width="118" height="16" fill="#0c0f1a"/>
+          <text x="22" y="47" fill="#374151" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" font-weight="700" letter-spacing="1.5">YOUR SYSTEM</text>
+
+          <!-- ══ AI AGENT PANEL ══ -->
+          <rect x="28" y="64" width="158" height="262" rx="9" fill="url(#lv1-ag)" stroke="#7c5cfc" stroke-width="1.5" stroke-opacity="0.55"/>
+          <text x="107" y="83" fill="#a78bfa" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">AI AGENT</text>
+          <!-- Robot head -->
+          <circle cx="107" cy="120" r="24" fill="#160e30" stroke="#7c5cfc" stroke-width="1.5"/>
+          <circle cx="98" cy="118" r="5" fill="#7c5cfc" opacity="0.85" filter="url(#lv1-gp)"/>
+          <circle cx="116" cy="118" r="5" fill="#7c5cfc" opacity="0.85" filter="url(#lv1-gp)"/>
+          <rect x="99" y="129" width="16" height="4" rx="2" fill="#7c5cfc" opacity="0.4"/>
+          <line x1="107" y1="96" x2="107" y2="86" stroke="#7c5cfc" stroke-width="1.5"/>
+          <circle cx="107" cy="83" r="3.5" fill="#7c5cfc" filter="url(#lv1-gp)"/>
+          <!-- Robot body -->
+          <rect x="83" y="150" width="48" height="44" rx="6" fill="#160e30" stroke="#7c5cfc" stroke-width="1.5"/>
+          <rect x="90" y="158" width="34" height="6" rx="3" fill="#7c5cfc" opacity="0.18"/>
+          <rect x="90" y="169" width="22" height="5" rx="2.5" fill="#7c5cfc" opacity="0.12"/>
+          <rect x="90" y="179" width="14" height="4" rx="2" fill="#7c5cfc" opacity="0.08"/>
+          <!-- Arms -->
+          <rect x="63" y="152" width="20" height="26" rx="6" fill="#130c28" stroke="#7c5cfc" stroke-width="1.5" stroke-opacity="0.65"/>
+          <rect x="131" y="152" width="20" height="26" rx="6" fill="#130c28" stroke="#7c5cfc" stroke-width="1.5" stroke-opacity="0.65"/>
+          <!-- Legs -->
+          <rect x="87" y="194" width="16" height="24" rx="5" fill="#130c28" stroke="#7c5cfc" stroke-width="1.5" stroke-opacity="0.65"/>
+          <rect x="111" y="194" width="16" height="24" rx="5" fill="#130c28" stroke="#7c5cfc" stroke-width="1.5" stroke-opacity="0.65"/>
+          <!-- Agent captions -->
+          <text x="107" y="242" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">&#x2460; explains intent</text>
+          <text x="107" y="256" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">&#x2461; proposes command</text>
+          <text x="107" y="270" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">&#x2462; awaits approval</text>
+          <text x="107" y="284" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">&#x2463; reports changes</text>
+          <rect x="56" y="296" width="102" height="18" rx="5" fill="#1a1040" stroke="#7c5cfc" stroke-width="1" stroke-opacity="0.5"/>
+          <text x="107" y="309" fill="#7c5cfc" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8.5" text-anchor="middle" font-weight="700">constrained agent</text>
+
+          <!-- Arrow: Agent to Approval -->
+          <line x1="187" y1="192" x2="254" y2="192" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#lv1-mam)"/>
+          <text x="220" y="185" fill="#d97706" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle" font-weight="600">proposes</text>
+
+          <!-- ══ APPROVAL GATE PANEL ══ -->
+          <rect x="258" y="118" width="154" height="156" rx="9" fill="url(#lv1-ap)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.6"/>
+          <text x="335" y="136" fill="#fbbf24" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">APPROVAL GATE</text>
+          <!-- Shield -->
+          <path d="M325,146 L345,146 L345,166 Q335,178 325,170 Z" fill="#1c1200" stroke="#f59e0b" stroke-width="1.5"/>
+          <polyline points="329,157 333,163 341,152" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- YES / NO buttons -->
+          <rect x="267" y="185" width="56" height="22" rx="5" fill="#0d1f0d" stroke="#22c55e" stroke-width="1.2"/>
+          <text x="295" y="200" fill="#22c55e" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" text-anchor="middle" font-weight="700">&#x2713; YES</text>
+          <rect x="339" y="185" width="56" height="22" rx="5" fill="#1a0d0d" stroke="#ef4444" stroke-width="1.2"/>
+          <text x="367" y="200" fill="#ef4444" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" text-anchor="middle" font-weight="700">&#x2717; NO</text>
+          <text x="335" y="225" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">"Yes, run it" triggers</text>
+          <text x="335" y="238" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">execution in sandbox</text>
+          <text x="335" y="255" fill="#6b7280" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">"No" cancels safely</text>
+
+          <!-- Arrow: Approval to Sandbox -->
+          <line x1="413" y1="192" x2="479" y2="192" stroke="#00e07a" stroke-width="1.5" marker-end="url(#lv1-mgm)"/>
+          <text x="446" y="185" fill="#00e07a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle" font-weight="600">executes</text>
+
+          <!-- ══ SANDBOX PANEL ══ -->
+          <rect x="484" y="56" width="262" height="328" rx="9" fill="url(#lv1-sb)" stroke="#00e07a" stroke-width="1.5" stroke-opacity="0.65"/>
+          <text x="615" y="74" fill="#00e07a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="700" text-anchor="middle" filter="url(#lv1-gg)" letter-spacing="0.5">LEVEL 1 SANDBOX</text>
+          <text x="615" y="88" fill="#1f4c2e" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8.5" text-anchor="middle">~/ai_sandbox_level1/</text>
+          <!-- File: level1_validate.sh -->
+          <rect x="498" y="100" width="112" height="72" rx="6" fill="#0d1a12" stroke="#153a1f" stroke-width="1.2"/>
+          <rect x="498" y="100" width="112" height="18" rx="6" fill="#153a1f"/>
+          <rect x="498" y="111" width="112" height="7" fill="#153a1f"/>
+          <text x="554" y="114" fill="#00e07a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5" text-anchor="middle" font-weight="700">level1_validate.sh</text>
+          <text x="507" y="130" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">#!/bin/sh</text>
+          <text x="507" y="141" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">TOTAL=$(find ...)</text>
+          <text x="507" y="152" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">COUNT_IMAGES=...</text>
+          <text x="507" y="163" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">write "$REPORT_FILE"</text>
+          <!-- File: test_files/ -->
+          <rect x="622" y="100" width="110" height="72" rx="6" fill="#10122a" stroke="#1a1e40" stroke-width="1.2"/>
+          <rect x="622" y="100" width="110" height="18" rx="6" fill="#1a1e40"/>
+          <rect x="622" y="111" width="110" height="7" fill="#1a1e40"/>
+          <text x="677" y="114" fill="#a78bfa" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5" text-anchor="middle" font-weight="700">test_files/</text>
+          <text x="631" y="130" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">photo.jpg</text>
+          <text x="631" y="141" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">report.pdf</text>
+          <text x="631" y="152" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">archive.zip</text>
+          <text x="631" y="163" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">&#x2026;</text>
+          <!-- File: level1_run.log -->
+          <rect x="498" y="184" width="112" height="72" rx="6" fill="#0d1520" stroke="#122033" stroke-width="1.2"/>
+          <rect x="498" y="184" width="112" height="18" rx="6" fill="#122033"/>
+          <rect x="498" y="195" width="112" height="7" fill="#122033"/>
+          <text x="554" y="198" fill="#38bdf8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5" text-anchor="middle" font-weight="700">level1_run.log</text>
+          <text x="507" y="215" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">2026-03-27 14:02</text>
+          <text x="507" y="226" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">Images=3 Docs=1</text>
+          <text x="507" y="237" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">Archives=0</text>
+          <text x="507" y="248" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">&#x2713; exit 0</text>
+          <!-- File: level1_summary.md -->
+          <rect x="622" y="184" width="110" height="72" rx="6" fill="#0d1520" stroke="#122033" stroke-width="1.2"/>
+          <rect x="622" y="184" width="110" height="18" rx="6" fill="#122033"/>
+          <rect x="622" y="195" width="110" height="7" fill="#122033"/>
+          <text x="677" y="198" fill="#38bdf8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5" text-anchor="middle" font-weight="700">level1_summary.md</text>
+          <text x="631" y="215" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5"># Validation</text>
+          <text x="631" y="226" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">Total files: 4</text>
+          <text x="631" y="237" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">Images: 3 / Docs: 1</text>
+          <text x="631" y="248" fill="#4b5563" font-family="ui-monospace,SFMono-Regular,monospace" font-size="7.5">Archives: 0</text>
+          <!-- Divider -->
+          <line x1="500" y1="268" x2="728" y2="268" stroke="#153a1f" stroke-width="1" stroke-dasharray="4,3"/>
+          <!-- Padlock icon -->
+          <rect x="603" y="280" width="24" height="20" rx="3" fill="#0d1a12" stroke="#00e07a" stroke-width="1.5"/>
+          <path d="M608,280 L608,274 Q615,266 622,274 L622,280" fill="none" stroke="#00e07a" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="615" cy="290" r="3" fill="#00e07a" opacity="0.45"/>
+          <line x1="615" y1="290" x2="615" y2="295" stroke="#00e07a" stroke-width="1.5" opacity="0.45"/>
+          <!-- Boundary notice -->
+          <text x="615" y="315" fill="#1f4c2e" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8.5" text-anchor="middle" font-weight="700">WRITES ONLY INSIDE THIS BOUNDARY</text>
+          <text x="615" y="330" fill="#374151" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" text-anchor="middle">no writes outside ~/ai_sandbox_level1/</text>
+          <text x="615" y="343" fill="#374151" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" text-anchor="middle">no network calls &#xB7; no destructive ops</text>
+          <text x="615" y="356" fill="#374151" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" text-anchor="middle">full audit trail in level1_run.log</text>
+          <text x="615" y="373" fill="#1f4c2e" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" text-anchor="middle" font-weight="600">&#x26A1; safe shell automation best practice</text>
+          <!-- Watermark -->
+          <text x="380" y="393" fill="#1e2535" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" text-anchor="middle">alternativeentrepreneur.com</text>
+        </svg>
+        <figcaption style="text-align:center;font-size:.8rem;color:var(--text-muted);margin-top:.75rem;">How a Level 1 validation sandbox works: the AI agent proposes a command &#x2192; you approve it at the gate &#x2192; execution is locked inside the sandbox boundary with a full audit log.</figcaption>
+      </figure>
+
       <h2>What Is a Level 1 Validation Sandbox?</h2>
 
       <p>A Level 1 validation sandbox is a small, isolated folder on your system where an AI agent is only allowed to perform very limited, low‑risk actions. It cannot touch anything outside that folder without your explicit approval.</p>
