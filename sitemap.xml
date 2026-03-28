@@ -28,9 +28,27 @@
   </url>
   <url>
     <loc>https://alternativeentrepreneur.com/resources/</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/resources/chatgpt-cheat-sheet/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/resources/entrepreneur-bundle/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://alternativeentrepreneur.com/resources/instagram-marketing-for-affiliate-creators/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://alternativeentrepreneur.com/privacy.html</loc>

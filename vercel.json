@@ -1,0 +1,44 @@
+{
+  "redirects": [
+    {
+      "source": "/p/chatgpt_cheat_sheet",
+      "destination": "/resources/chatgpt-cheat-sheet/",
+      "permanent": true
+    },
+    {
+      "source": "/p/chatgpt_cheat_sheet/",
+      "destination": "/resources/chatgpt-cheat-sheet/",
+      "permanent": true
+    },
+    {
+      "source": "/p/bundle",
+      "destination": "/resources/entrepreneur-bundle/",
+      "permanent": true
+    },
+    {
+      "source": "/p/bundle/",
+      "destination": "/resources/entrepreneur-bundle/",
+      "permanent": true
+    },
+    {
+      "source": "/p/tai-lopez-affiliate-booster",
+      "destination": "/resources/program-no-longer-available/",
+      "permanent": true
+    },
+    {
+      "source": "/p/tai-lopez-affiliate-booster/",
+      "destination": "/resources/program-no-longer-available/",
+      "permanent": true
+    },
+    {
+      "source": "/p/instagrammarketing",
+      "destination": "/resources/instagram-marketing-for-affiliate-creators/",
+      "permanent": true
+    },
+    {
+      "source": "/p/instagrammarketing/",
+      "destination": "/resources/instagram-marketing-for-affiliate-creators/",
+      "permanent": true
+    }
+  ]
+}
